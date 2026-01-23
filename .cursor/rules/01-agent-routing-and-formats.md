@@ -1,0 +1,55 @@
+---
+description: "Agentic System: роутинг ролей и форматы handoff"
+---
+
+## Роутинг: какой “агент” нужен на какой запрос
+
+Используй ближайшую роль и её спецификацию из `mnt/user-data/outputs/agentic-system/agents/...`:
+
+- **Orchestrator**: новая идея/инициатива, план работ, координация фаз, статус, конфликты, чекпоинты.
+- **Product / Research / Analytics**: Vision/PRD/User Stories, конкурентный/рынок, метрики и трекинг-план.
+- **UX / UI / Content**: user flows, IA, wireframes, дизайн-система, UI-copy/microcopy/voice&tone.
+- **Architect / Data / Security**: системный дизайн, ADR, доменная модель/схема/контракты, threat model/requirements.
+- **Dev**: технические спеки фич, кодовые конвенции, выбор implementation-агента (cursor vs claude-coder).
+- **Cursor**: реализация/фиксы/итерации/интеграционные правки в репозитории (внутри IDE).
+- **Review / QA**: верификация 100% по спекам, качество кода, покрытие тестами, тест-стратегия/прогон.
+- **DevOps / SRE / Marketing**: CI/CD/IaC/deploy, мониторинг/SLO/runbooks, go-to-market и контент-план.
+
+## Формат handoff (когда “передаёшь” задачу роли)
+
+Внутри одного диалога Cursor нет реального изолированного запуска саб-агента, поэтому “handoff” делай как:
+
+1) краткий **контекст (summary + ссылки)**  
+2) **требования/AC**  
+3) **ожидаемые артефакты** (пути в репо/доках)
+
+Рекомендуемый контейнер:
+
+```yaml
+task_request:
+  agent: "<agent>"
+  type: "create|review|update|verify"
+  input:
+    summary: "<кратко>"
+    references:
+      - "<path или ссылка>"
+    constraints: []
+  expected_output:
+    deliverables:
+      - "<что создать/обновить>"
+```
+
+И ответ:
+
+```yaml
+task_response:
+  agent: "<agent>"
+  status: "completed|partial|blocked|failed"
+  output:
+    summary: "<кратко>"
+    artifacts:
+      - "<path>"
+  issues: []
+  next_steps: []
+```
+
