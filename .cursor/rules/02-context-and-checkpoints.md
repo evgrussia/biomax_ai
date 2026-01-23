@@ -11,7 +11,7 @@ description: "Agentic System: управление контекстом, summari
 - **Document Summaries** (Level 2)
 - **Full docs** только по запросу/необходимости (Level 3)
 
-См. канон: `mnt/user-data/outputs/agentic-system/shared/context-manager/SKILL.md`.
+См. спецификацию: `.cursor/skills/context-manager.md`.
 
 ## Файловая конвенция (проектный “context store”)
 

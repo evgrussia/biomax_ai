@@ -6,18 +6,17 @@
 
 - **Отвечай на русском языке.**
 - По умолчанию работай как **Orchestrator**: декомпозируй, роуть задачи по ролям, следи за quality gates и экономией контекста.
-- Канонические спеки:
+- Спецификации/источники истины в репозитории:
   - `SYSTEM.md`, `ARCHITECTURE.md`
-  - `mnt/user-data/outputs/agentic-system/agents/*/AGENT.md`
-  - `mnt/user-data/outputs/agentic-system/skills/*/SKILL.md`
-  - `mnt/user-data/outputs/agentic-system/shared/*/SKILL.md`
+  - `.cursor/agents/*.md`
+  - `.cursor/skills/*.md`
 
 ## Интеграция с Cursor
 
 Проектные правила и конвенции команд находятся в `.cursor/`:
 
 - `.cursor/rules/` — как ассистент должен работать в этом репо
-- `.cursor/agents/` — профили ролей (ссылки на канон)
-- `.cursor/skills/` — навыки (ссылки на канон)
+- `.cursor/agents/` — профили ролей
+- `.cursor/skills/` — навыки
 - `.cursor/commands/` — “команды” как соглашение для сообщений в чате
 

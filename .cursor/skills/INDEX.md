@@ -1,15 +1,12 @@
 # Skills (навыки)
 
-Канонические навыки лежат в:
-
-- `mnt/user-data/outputs/agentic-system/skills/*/SKILL.md`
-- `mnt/user-data/outputs/agentic-system/shared/*/SKILL.md`
+Тексты навыков хранятся прямо в `.cursor/skills/*.md`.
 
 ## Доступные навыки
 
-- `web-research` → `skills/web-research/SKILL.md`
-- `document-generator` → `skills/document-generator/SKILL.md`
-- `image-generator` → `skills/image-generator/SKILL.md`
-- `context-manager` → `shared/context-manager/SKILL.md`
-- `verification-engine` → `shared/verification-engine/SKILL.md`
+- `web-research` → `.cursor/skills/web-research.md`
+- `document-generator` → `.cursor/skills/document-generator.md`
+- `image-generator` → `.cursor/skills/image-generator.md`
+- `context-manager` → `.cursor/skills/context-manager.md`
+- `verification-engine` → `.cursor/skills/verification-engine.md`
 

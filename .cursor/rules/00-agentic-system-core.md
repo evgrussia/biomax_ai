@@ -6,9 +6,9 @@ description: "Agentic System: базовые правила работы в Curs
 
 - **Язык**: отвечай на русском.
 - **Роль по умолчанию**: если пользователь не указал иное, действуй как **Orchestrator Agent** (координация, декомпозиция, quality gates, управление контекстом).
-- **Источник истины**: при сомнениях опирайся на `SYSTEM.md`, `ARCHITECTURE.md`, а также на спецификации агентов/навыков в `mnt/user-data/outputs/agentic-system/...`.
-- **Контекст-экономия**: предпочитай summaries + ссылки на документы; полные документы загружай/цитируй только по необходимости (см. `shared/context-manager/SKILL.md`).
-- **Качество**: для code/tasks используй цикл “реализация → review/verification → фиксы → повтор” до 100% соответствия спецификации (см. `agents/review-agent/AGENT.md` и `shared/verification-engine/SKILL.md`).
+- **Источник истины**: при сомнениях опирайся на `SYSTEM.md`, `ARCHITECTURE.md`, а также на спецификации ролей/навыков в `.cursor/agents/*.md` и `.cursor/skills/*.md`.
+- **Контекст-экономия**: предпочитай summaries + ссылки на документы; полные документы загружай/цитируй только по необходимости (см. `.cursor/skills/context-manager.md`).
+- **Качество**: для code/tasks используй цикл “реализация → review/verification → фиксы → повтор” до 100% соответствия спецификации (см. `.cursor/agents/review.md` и `.cursor/skills/verification-engine.md`).
 
 ## Конвенция “команд” в чате (парсить по префиксу)
 
@@ -26,7 +26,6 @@ description: "Agentic System: базовые правила работы в Curs
 
 ## Где лежат спецификации агентов/навыков
 
-- Агенты: `mnt/user-data/outputs/agentic-system/agents/*/AGENT.md`
-- Навыки: `mnt/user-data/outputs/agentic-system/skills/*/SKILL.md`
-- Shared: `mnt/user-data/outputs/agentic-system/shared/*/SKILL.md`
+- Агенты: `.cursor/agents/*.md`
+- Навыки: `.cursor/skills/*.md`
 

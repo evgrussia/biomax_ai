@@ -2,14 +2,13 @@
 
 Этот каталог делает проект **самоописываемым для Cursor**: правила (`rules`), профили “субагентов” (`agents`), навыки (`skills`) и заготовки команд (`commands`).
 
-## Источники истины (canonical)
+## Источники истины
 
 - **Система/архитектура**: `SYSTEM.md`, `ARCHITECTURE.md`
-- **Агенты**: `mnt/user-data/outputs/agentic-system/agents/*/AGENT.md`
-- **Навыки**: `mnt/user-data/outputs/agentic-system/skills/*/SKILL.md`
-- **Shared skills**: `mnt/user-data/outputs/agentic-system/shared/*/SKILL.md`
+- **Агенты**: `.cursor/agents/*.md`
+- **Навыки**: `.cursor/skills/*.md`
 
-Файлы в `.cursor/` — это **интеграционный слой**: они не дублируют полностью канон, а задают единый способ пользоваться системой в Cursor (включая “команды” и правила роутинга).
+Файлы в `.cursor/` — это **интеграционный слой для Cursor**: они содержат профили ролей/навыков, команды и правила роутинга.
 
 ## Быстрый старт в чате Cursor
 
@@ -23,5 +22,5 @@
 
 ## Где “субагенты”
 
-В `.cursor/agents/` лежат **профили ролей** (Orchestrator/Dev/Review/QA/…); они ссылаются на канонические спецификации в `mnt/.../agents/.../AGENT.md`.
+В `.cursor/agents/` лежат **профили ролей** (Orchestrator/Dev/Review/QA/…) с полным текстом спецификаций и подсказками по использованию.
 

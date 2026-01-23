@@ -7,6 +7,6 @@
 - `context/checkpoints/CP-<phase>-<timestamp>.yaml` (или обновление текущего)
 - (опционально) `context/summaries/<phase>.yaml`
 
-### Канон
-См. `mnt/user-data/outputs/agentic-system/shared/context-manager/SKILL.md` и `agents/orchestrator-agent/AGENT.md`.
+### Спецификация
+См. `.cursor/skills/context-manager.md` и `.cursor/agents/orchestrator.md`.
 

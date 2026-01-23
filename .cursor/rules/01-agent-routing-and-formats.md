@@ -4,7 +4,7 @@ description: "Agentic System: роутинг ролей и форматы handof
 
 ## Роутинг: какой “агент” нужен на какой запрос
 
-Используй ближайшую роль и её спецификацию из `mnt/user-data/outputs/agentic-system/agents/...`:
+Используй ближайшую роль и её спецификацию из `.cursor/agents/<agent>.md`:
 
 - **Orchestrator**: новая идея/инициатива, план работ, координация фаз, статус, конфликты, чекпоинты.
 - **Product / Research / Analytics**: Vision/PRD/User Stories, конкурентный/рынок, метрики и трекинг-план.

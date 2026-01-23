@@ -1,27 +1,25 @@
 # Профили агентов (субагенты)
 
-Этот проект хранит канонические спецификации агентов тут:
-
-`mnt/user-data/outputs/agentic-system/agents/*/AGENT.md`
+Тексты профилей агентов хранятся прямо в `.cursor/agents/*.md`.
 
 ## Доступные роли
 
-- `orchestrator` → `agents/orchestrator-agent/AGENT.md`
-- `product` → `agents/product-agent/AGENT.md`
-- `research` → `agents/research-agent/AGENT.md`
-- `analytics` → `agents/analytics-agent/AGENT.md`
-- `ux` → `agents/ux-agent/AGENT.md`
-- `ui` → `agents/ui-agent/AGENT.md`
-- `content` → `agents/content-agent/AGENT.md`
-- `architect` → `agents/architect-agent/AGENT.md`
-- `data` → `agents/data-agent/AGENT.md`
-- `security` → `agents/security-agent/AGENT.md`
-- `dev` → `agents/dev-agent/AGENT.md`
-- `cursor` → `agents/cursor-agent/AGENT.md`
-- `claude-coder` → `agents/claude-coder-agent/AGENT.md`
-- `qa` → `agents/qa-agent/AGENT.md`
-- `review` → `agents/review-agent/AGENT.md`
-- `devops` → `agents/devops-agent/AGENT.md`
-- `sre` → `agents/sre-agent/AGENT.md`
-- `marketing` → `agents/marketing-agent/AGENT.md`
+- `orchestrator` → `.cursor/agents/orchestrator.md`
+- `product` → `.cursor/agents/product.md`
+- `research` → `.cursor/agents/research.md`
+- `analytics` → `.cursor/agents/analytics.md`
+- `ux` → `.cursor/agents/ux.md`
+- `ui` → `.cursor/agents/ui.md`
+- `content` → `.cursor/agents/content.md`
+- `architect` → `.cursor/agents/architect.md`
+- `data` → `.cursor/agents/data.md`
+- `security` → `.cursor/agents/security.md`
+- `dev` → `.cursor/agents/dev.md`
+- `cursor` → `.cursor/agents/cursor.md`
+- `claude-coder` → `.cursor/agents/claude-coder.md`
+- `qa` → `.cursor/agents/qa.md`
+- `review` → `.cursor/agents/review.md`
+- `devops` → `.cursor/agents/devops.md`
+- `sre` → `.cursor/agents/sre.md`
+- `marketing` → `.cursor/agents/marketing.md`
 
