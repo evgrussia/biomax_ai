@@ -1,6 +1,6 @@
 ---
 name: analytics
-description: "Analytics Engineer. Метрики, tracking plan, A/B, аналитическая модель."
+description: Designs metrics frameworks, creates tracking plans, sets up A/B testing, and builds analytical models. Use when defining product metrics, creating tracking plans, setting up analytics, or designing A/B experiments.
 ---
 
 ## Спецификация

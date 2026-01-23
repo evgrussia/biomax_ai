@@ -1,9 +1,7 @@
 ---
 name: image-generator
-description: "Генерация графики для продукта: иллюстрации, иконки, hero, backgrounds, social."
+description: Generates graphics for products including illustrations, icons, hero images, backgrounds, and social media graphics. Use when creating visual assets, generating UI graphics, designing icons, or producing marketing images.
 ---
-
-## Спецификация
 
 # Image Generator Skill
 
@@ -145,4 +143,3 @@ image_generation_result:
   alt_text: "[Suggested alt text]"
   usage_notes: "[How to use this asset]"
 ```
-

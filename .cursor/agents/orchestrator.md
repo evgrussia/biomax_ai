@@ -1,6 +1,6 @@
 ---
 name: orchestrator
-description: "Главный координатор (TPM/Lead). Декомпозиция, роутинг, quality gates, контекст, чекпоинты."
+description: Coordinates project lifecycle from idea to production. Decomposes tasks, routes to agents, manages quality gates, context, and checkpoints. Use when starting a new project, coordinating phases, managing project status, resolving conflicts, or creating checkpoints.
 ---
 
 ## Спецификация

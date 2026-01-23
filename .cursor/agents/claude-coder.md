@@ -1,6 +1,6 @@
 ---
 name: claude-coder
-description: "Developer (Claude-based). Сложные фичи, архитектура, генерация тестов, крупные рефакторинги."
+description: Implements complex features, architectural components, generates tests, and performs large refactorings using Claude-based code generation. Use when implementing complex features, building architectural components, or performing major code refactoring.
 ---
 
 ## Спецификация

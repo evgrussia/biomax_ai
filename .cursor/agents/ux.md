@@ -1,6 +1,6 @@
 ---
 name: ux
-description: "UX Designer. User flows, IA, wireframes, accessibility."
+description: Designs user experiences including user flows, information architecture, wireframes, and accessibility requirements. Use when creating user flows, designing information architecture, creating wireframes, or defining accessibility standards.
 ---
 
 ## Спецификация

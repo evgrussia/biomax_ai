@@ -1,6 +1,6 @@
 ---
 name: qa
-description: "Senior QA/SDET. Test strategy/plan/cases, тест-инфраструктура, прогоны, quality gates."
+description: Creates test strategies, test plans, test cases, sets up test infrastructure, runs test suites, and manages quality gates. Use when creating test strategies, writing test plans, setting up test infrastructure, or running quality assurance checks.
 ---
 
 ## Спецификация

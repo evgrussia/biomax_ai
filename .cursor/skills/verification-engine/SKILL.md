@@ -1,9 +1,7 @@
 ---
 name: verification-engine
-description: "Верификация полноты реализации относительно спеки, расчёт completion %, отчёт и action items."
+description: Verifies implementation completeness against specifications, calculates completion percentage, generates reports and action items. Use when reviewing code implementation, checking spec compliance, calculating feature completion, or generating verification reports.
 ---
-
-## Спецификация
 
 # Verification Engine
 
@@ -204,4 +202,3 @@ Orchestrator uses completion % to:
 | Ready for testing | 100% |
 | Needs minor fixes | 90-99% |
 | Needs significant work | < 90% |
-

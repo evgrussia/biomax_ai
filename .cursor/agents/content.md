@@ -1,6 +1,6 @@
 ---
 name: content
-description: "UX Writer / Content Strategist. UX copy, microcopy, voice & tone, шаблоны писем."
+description: Creates UX copy, microcopy, defines voice and tone, and designs email templates. Use when writing interface copy, creating content guidelines, defining brand voice, or designing communication templates.
 ---
 
 ## Спецификация

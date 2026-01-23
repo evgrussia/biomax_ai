@@ -1,6 +1,6 @@
 ---
 name: review
-description: "Senior Code Reviewer. Верификация 100% по спекам, качество, тесты, базовая безопасность."
+description: Reviews code for 100% spec compliance, code quality, test coverage, and basic security. Use when reviewing code implementations, verifying spec compliance, checking code quality, or performing code reviews.
 ---
 
 ## Спецификация

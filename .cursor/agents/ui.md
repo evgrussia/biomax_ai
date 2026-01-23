@@ -1,6 +1,6 @@
 ---
 name: ui
-description: "UI Designer. Design system, UI kit, визуальные спеки компонентов."
+description: Creates design systems, UI kits, and visual specifications for components. Use when building design systems, creating UI component libraries, or defining visual design specifications.
 ---
 
 ## Спецификация

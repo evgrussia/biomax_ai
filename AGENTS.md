@@ -9,7 +9,7 @@
 - Спецификации/источники истины в репозитории:
   - `SYSTEM.md`, `ARCHITECTURE.md`
   - `.cursor/agents/*.md`
-  - `.cursor/skills/*.md`
+  - `.cursor/skills/*/SKILL.md`
 
 ## Интеграция с Cursor
 

@@ -1,9 +1,7 @@
 ---
 name: context-manager
-description: "Экономия контекста: summaries, checkpoints, lazy loading, бюджет токенов."
+description: Manages context between agents for token economy while maintaining effectiveness. Creates summaries, checkpoints, lazy loading strategies, and manages token budgets. Use when working with project context, creating summaries, managing checkpoints, or optimizing token usage.
 ---
-
-## Спецификация
 
 # Context Manager
 
@@ -208,4 +206,3 @@ After phase completion:
 - [ ] Links to full docs preserved
 - [ ] Budget not exceeded
 - [ ] Next agent has what they need
-

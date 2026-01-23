@@ -1,6 +1,6 @@
 ---
 name: product
-description: "Product Manager. Vision, PRD, User Stories, Roadmap."
+description: Transforms business ideas into structured product documentation. Creates vision documents, PRDs, user stories, acceptance criteria, roadmaps, and decision logs. Use when defining product vision, creating requirements documents, writing user stories, or planning product roadmap.
 ---
 
 ## Спецификация

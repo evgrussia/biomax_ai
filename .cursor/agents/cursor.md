@@ -1,6 +1,6 @@
 ---
 name: cursor
-description: "Senior Full-Stack Developer (IDE). Реализация/фиксы/итерации по готовой техспеке + тесты."
+description: Implements code according to technical specifications, writes tests, fixes bugs, and refactors code. Works directly in IDE repository. Use when implementing features, fixing bugs, writing tests, or refactoring code based on technical specs.
 ---
 
 ## Спецификация

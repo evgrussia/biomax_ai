@@ -1,9 +1,7 @@
 ---
 name: document-generator
-description: "Генерация проектной документации (README, API docs, user guides, техдоки)."
+description: Generates project documentation including README files, API documentation, user guides, technical documentation, and changelogs. Use when creating documentation, writing README files, documenting APIs, or generating user guides.
 ---
-
-## Спецификация
 
 # Document Generator Skill
 
@@ -165,4 +163,3 @@ A: You can...
 - [ ] Screenshots are current
 - [ ] Table of contents for long docs
 - [ ] Proper markdown formatting
-

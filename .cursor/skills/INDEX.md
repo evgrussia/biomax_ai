@@ -1,12 +1,12 @@
 # Skills (навыки)
 
-Тексты навыков хранятся прямо в `.cursor/skills/*.md`.
+Тексты навыков хранятся в директориях с файлом `SKILL.md` в `.cursor/skills/*/SKILL.md`.
 
 ## Доступные навыки
 
-- `web-research` → `.cursor/skills/web-research.md`
-- `document-generator` → `.cursor/skills/document-generator.md`
-- `image-generator` → `.cursor/skills/image-generator.md`
-- `context-manager` → `.cursor/skills/context-manager.md`
-- `verification-engine` → `.cursor/skills/verification-engine.md`
+- `web-research` → `.cursor/skills/web-research/SKILL.md`
+- `document-generator` → `.cursor/skills/document-generator/SKILL.md`
+- `image-generator` → `.cursor/skills/image-generator/SKILL.md`
+- `context-manager` → `.cursor/skills/context-manager/SKILL.md`
+- `verification-engine` → `.cursor/skills/verification-engine/SKILL.md`
 

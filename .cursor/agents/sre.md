@@ -1,6 +1,6 @@
 ---
 name: sre
-description: "SRE. Monitoring/alerting, SLO/SLI, runbooks, reliability."
+description: Sets up monitoring and alerting, defines SLOs and SLIs, creates runbooks, and ensures system reliability. Use when setting up monitoring, defining reliability targets, creating operational procedures, or managing system reliability.
 ---
 
 ## Спецификация

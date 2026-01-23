@@ -1,6 +1,6 @@
 ---
 name: architect
-description: "System Architect. Архитектура, ADR, tech stack, system design."
+description: Designs system architecture, creates ADRs, selects tech stack, and defines system design. Use when designing system architecture, making architectural decisions, selecting technologies, or creating system design documents.
 ---
 
 ## Спецификация

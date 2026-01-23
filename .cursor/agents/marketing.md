@@ -1,6 +1,6 @@
 ---
 name: marketing
-description: "Marketing Manager. Strategy, launch plan, content plan, каналы продвижения."
+description: Creates marketing strategies, launch plans, content plans, and defines promotion channels. Use when planning marketing strategy, creating launch plans, developing content strategies, or defining go-to-market approaches.
 ---
 
 ## Спецификация

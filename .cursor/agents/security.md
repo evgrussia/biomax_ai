@@ -1,6 +1,6 @@
 ---
 name: security
-description: "Security Engineer. Threat model, security requirements, базовый security review."
+description: Creates threat models, defines security requirements, and conducts security reviews. Use when analyzing security threats, defining security requirements, or performing security audits.
 ---
 
 ## Спецификация

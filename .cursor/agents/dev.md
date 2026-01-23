@@ -1,6 +1,6 @@
 ---
 name: dev
-description: "Tech Lead. Спеки фич, код-конвенции, выбор implementation агента, декомпозиция dev-задач."
+description: Creates technical specifications for features, defines code conventions, selects implementation agents, and decomposes development tasks. Use when creating technical specs, defining coding standards, planning implementation, or breaking down development work.
 ---
 
 ## Спецификация

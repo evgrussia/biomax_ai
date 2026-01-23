@@ -8,5 +8,5 @@
 - (опционально) `context/summaries/<phase>.yaml`
 
 ### Спецификация
-См. `.cursor/skills/context-manager.md` и `.cursor/agents/orchestrator.md`.
+См. `.cursor/skills/context-manager/SKILL.md` и `.cursor/agents/orchestrator.md`.
 

@@ -1,5 +1,6 @@
 ---
 description: "Agentic System: управление контекстом, summaries и checkpoints"
+alwaysApply: true
 ---
 
 ## Бюджет контекста (принцип)
@@ -11,11 +12,11 @@ description: "Agentic System: управление контекстом, summari
 - **Document Summaries** (Level 2)
 - **Full docs** только по запросу/необходимости (Level 3)
 
-См. спецификацию: `.cursor/skills/context-manager.md`.
+См. спецификацию: `.cursor/skills/context-manager/SKILL.md`.
 
-## Файловая конвенция (проектный “context store”)
+## Файловая конвенция (проектный "context store")
 
-Если пользователь просит вести проект “по системе”, то используй эти пути:
+Если пользователь просит вести проект "по системе", то используй эти пути:
 
 - `context/project-brief.yaml`
 - `context/summaries/` — краткие summaries (фазы/документы)
@@ -29,4 +30,3 @@ description: "Agentic System: управление контекстом, summari
 - ключевые решения (decision log)
 - next_actions (3–7 пунктов)
 - blockers (если есть)
-

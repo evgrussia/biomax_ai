@@ -1,6 +1,6 @@
 ---
 name: data
-description: "Data Engineer. Доменная модель, схема БД, API contracts, данные/миграции."
+description: Designs domain models, database schemas, API contracts, and manages data migrations. Use when designing data models, creating database schemas, defining API contracts, or planning data migrations.
 ---
 
 ## Спецификация

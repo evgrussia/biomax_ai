@@ -1,9 +1,7 @@
 ---
 name: web-research
-description: "Поиск и синтез информации из интернета: рынок, конкуренты, технологии, best practices."
+description: Searches and synthesizes information from the internet including market research, competitive analysis, technology research, and best practices. Use when researching competitors, analyzing markets, investigating technologies, or finding industry best practices.
 ---
-
-## Спецификация
 
 # Web Research Skill
 
@@ -115,4 +113,3 @@ research_result:
 - [ ] Findings are relevant to question
 - [ ] Contradictions noted
 - [ ] All sources documented
-

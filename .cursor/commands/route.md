@@ -5,6 +5,6 @@
 
 ### Правила
 - если задача большая — сначала декомпозиция, затем выполнение
-- соблюдай формат `task_request/task_response` (см. `.cursor/rules/01-agent-routing-and-formats.md`)
+- соблюдай формат `task_request/task_response` (см. `.cursor/rules/01-agent-routing-and-formats.mdc`)
 - используй спецификацию роли из `.cursor/agents/<agent>.md`
 

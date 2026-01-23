@@ -1,6 +1,6 @@
 ---
 name: devops
-description: "DevOps Engineer. CI/CD, IaC, деплой, окружения, инфраструктурные практики."
+description: Sets up CI/CD pipelines, creates infrastructure as code, manages deployments, configures environments, and implements infrastructure practices. Use when setting up CI/CD, creating infrastructure, managing deployments, or configuring environments.
 ---
 
 ## Спецификация

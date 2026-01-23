@@ -1,6 +1,6 @@
 ---
 name: research
-description: "Market Research Analyst. Competitive analysis, market research, тренды, альтернативы."
+description: Conducts market research, competitive analysis, trend analysis, and identifies alternatives. Use when researching competitors, analyzing market trends, investigating industry alternatives, or gathering market intelligence.
 ---
 
 ## Спецификация
