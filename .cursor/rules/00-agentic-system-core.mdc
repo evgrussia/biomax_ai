@@ -19,7 +19,7 @@ alwaysApply: true
   - создай/обнови `context/project-brief.yaml`
   - предложи следующий шаг "Discovery" и список артефактов
 - `/status`: выдай текущую фазу, последний чекпоинт и 3 следующих действия
-- `/route <agent> <task>`: выполни задачу **в роли указанного агента** (agent name: `orchestrator|product|research|analytics|ux|ui|content|architect|data|security|dev|cursor|claude-coder|qa|review|devops|sre|marketing`)
+- `/route <agent> <task>`: выполни задачу **в роли указанного агента** (agent name: `orchestrator|product|research|analytics|business-analyst|ux|ui|content|architect|data|security|dev|ai-agents|coder|qa|review|devops|sre|marketing`)
 - `/checkpoint`: создай/обнови чекпоинт в `context/checkpoints/` по шаблону из orchestrator/context-manager
 - `/summary`: сгенерируй краткое саммари состояния (≤ 500 tokens смысловой ёмкости) + список ссылок на артефакты
 

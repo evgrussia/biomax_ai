@@ -233,14 +233,14 @@ security:
 
 5. DECISION
    IF completion = 100% AND no critical issues:
-     → PASS to Test Agent
+     → PASS to QA Agent
    ELSE:
-     → RETURN to Cursor Agent with findings
+     → RETURN to Coder Agent with findings
 ```
 
 ## Integration with Other Agents
 
-### From Cursor Agent
+### From Coder Agent
 ```yaml
 review_request:
   feature: "[Feature Name]"
@@ -260,7 +260,7 @@ review_result:
   next_action: "test_execution"
 ```
 
-### To Cursor Agent (if FAIL)
+### To Coder Agent (if FAIL)
 ```yaml
 review_result:
   feature: "[Feature Name]"

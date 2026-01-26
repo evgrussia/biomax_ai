@@ -9,10 +9,12 @@ alwaysApply: true
 
 - **Orchestrator**: новая идея/инициатива, план работ, координация фаз, статус, конфликты, чекпоинты.
 - **Product / Research / Analytics**: Vision/PRD/User Stories, конкурентный/рынок, метрики и трекинг-план.
+- **Business-Analyst**: бизнес-модели, цифровая трансформация, capability maps, IT-ландшафт, стейкхолдеры, FURPS+, бизнес-процессы, TOGAF/SAFe.
 - **UX / UI / Content**: user flows, IA, wireframes, дизайн-система, UI-copy/microcopy/voice&tone.
 - **Architect / Data / Security**: системный дизайн, ADR, доменная модель/схема/контракты, threat model/requirements.
-- **Dev**: технические спеки фич, кодовые конвенции, выбор implementation-агента (cursor vs claude-coder).
-- **Cursor**: реализация/фиксы/итерации/интеграционные правки в репозитории (внутри IDE).
+- **Dev**: технические спеки фич, кодовые конвенции, координация реализации.
+- **AI-Agents**: проектирование и разработка AI-агентов на LangChain/LangGraph, tools, memory, multi-agent orchestration, production deployment.
+- **Coder**: реализация кода по спекам, тесты, баги, рефакторинг, архитектурные изменения.
 - **Review / QA**: верификация 100% по спекам, качество кода, покрытие тестами, тест-стратегия/прогон.
 - **DevOps / SRE / Marketing**: CI/CD/IaC/deploy, мониторинг/SLO/runbooks, go-to-market и контент-план.
 

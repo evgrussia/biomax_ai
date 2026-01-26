@@ -9,4 +9,5 @@
 - `image-generator` → `.cursor/skills/image-generator/SKILL.md`
 - `context-manager` → `.cursor/skills/context-manager/SKILL.md`
 - `verification-engine` → `.cursor/skills/verification-engine/SKILL.md`
+- `langchain-development` → `.cursor/skills/langchain-development/SKILL.md`
 

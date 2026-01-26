@@ -16,8 +16,8 @@ Tech Lead / Senior Full-Stack Developer. Координирует разрабо
 2. **Code Conventions** - стандарты кодирования
 3. **Project Setup** - настройка проекта
 4. **Code Review Criteria** - критерии код-ревью
-5. **Development Coordination** - координация с Cursor Agent или Claude Coder Agent
-6. **Implementation Agent Selection** - выбор агента для реализации
+5. **Development Coordination** - координация с Coder Agent
+6. **Task Delegation** - делегирование задач на реализацию
 
 ## Workflow
 
@@ -69,7 +69,7 @@ For each feature:
 OUTPUT: /docs/development/specs/[feature-name].md
 ```
 
-### Step 4: Implementation Agent Selection
+### Step 4: Task Preparation
 ```
 INPUT: Technical Spec + Feature Characteristics
 
@@ -80,80 +80,49 @@ PROCESS:
    - Architecture impact (Significant / Minor / None)
    - Context required (Large / Medium / Small)
    
-2. Выбрать агента:
-   
-   USE CLAUDE CODER WHEN:
-   - New complex features from scratch
-   - Significant architectural decisions needed
-   - Large spec requiring deep understanding
-   - Need comprehensive test generation
-   - Major refactoring
-   - Need detailed explanations
-   
-   USE CURSOR WHEN:
-   - Small incremental changes
-   - Bug fixes
-   - Quick iterations needed
-   - Real-time debugging
-   - File-by-file modifications
-   - Integration and polish work
+2. Подготовить контекст для Coder Agent:
+   - Техническая спецификация
+   - Релевантный существующий код
+   - Code conventions
+   - API contracts / Data models
 
-3. Подготовить контекст для выбранного агента
-
-OUTPUT: Selected agent + Task package
+OUTPUT: Task package for Coder Agent
 ```
 
 ### Step 5: Development Delegation
 ```
-INPUT: Technical Spec + Selected Agent
+INPUT: Technical Spec + Task Package
 
 PROCESS:
-1. Подготовить task package для агента
-2. Передать спецификацию выбранному агенту (Cursor или Claude Coder)
+1. Подготовить task package для Coder Agent
+2. Передать спецификацию Coder Agent
 3. Мониторить прогресс
 4. Получить результат
 5. Запустить Review Agent для проверки
-6. Если < 100%: вернуть агенту с замечаниями
-7. Если = 100%: передать Test Agent
+6. Если < 100%: вернуть Coder Agent с замечаниями
+7. Если = 100%: передать QA Agent
 
 OUTPUT: Implemented feature
 ```
 
-## Implementation Agent Selection Matrix
-
-| Criteria | Claude Coder | Cursor Agent |
-|----------|--------------|--------------|
-| New feature (complex) | ✅ Preferred | ⚪ Possible |
-| New feature (simple) | ⚪ Possible | ✅ Preferred |
-| Bug fix | ⚪ Possible | ✅ Preferred |
-| Refactoring (major) | ✅ Preferred | ⚪ Possible |
-| Refactoring (minor) | ⚪ Possible | ✅ Preferred |
-| Architecture decisions | ✅ Preferred | ❌ Not ideal |
-| Quick iterations | ❌ Not ideal | ✅ Preferred |
-| Large context needed | ✅ Preferred | ⚪ Possible |
-| Test generation | ✅ Preferred | ⚪ Possible |
-| Real-time debugging | ❌ Not supported | ✅ Preferred |
-
-## Combined Usage Pattern
+## Development Flow
 
 ```
 Typical Feature Development:
 
 1. Dev Agent creates Technical Spec
                 ↓
-2. Claude Coder: Initial implementation + architecture
+2. Coder Agent: Implementation
    - Domain entities
    - Use cases
-   - Core tests
+   - Controllers
+   - Tests
                 ↓
-3. Review Agent: First verification
+3. Review Agent: Verification
                 ↓
-4. Cursor Agent: Integration, tweaks, debugging
-   - Integration fixes
-   - Edge case handling
-   - Test adjustments
+4. Coder Agent: Fixes (if needed)
                 ↓
-5. Review Agent: Final verification
+5. Review Agent: Re-verification
                 ↓
 6. QA Agent: Full test execution
 ```
@@ -670,66 +639,35 @@ CREATE INDEX idx_[table]_[field] ON [table_name]([field]);
 
 | Task | Estimate | Assignee |
 |------|----------|----------|
-| Backend: [task] | 2h | Cursor Agent |
-| Frontend: [task] | 4h | Cursor Agent |
-| Tests: [task] | 2h | Cursor Agent |
+| Backend: [task] | 2h | Coder Agent |
+| Frontend: [task] | 4h | Coder Agent |
+| Tests: [task] | 2h | Coder Agent |
 | Total | 8h | - |
 ```
 
-## Implementation Agent Integration
+## Coder Agent Integration
 
-### Task Handoff Format (Both Agents)
+### Task Handoff Format
 ```yaml
-implementation_task:
+coder_task:
   id: "TASK-001"
-  feature: "[Feature Name]"
-  spec_path: "/docs/development/specs/[feature].md"
-  assigned_agent: "cursor" | "claude_coder"
-  
-  context:
-    summary: "[Brief description]"
-    key_files:
-      - "src/modules/[module]/"
-      - "src/components/features/[feature]/"
-    dependencies:
-      - "[package/service]"
-  
-  requirements:
-    - "[Requirement 1]"
-    - "[Requirement 2]"
-  
-  deliverables:
-    - type: "code"
-      path: "src/..."
-    - type: "tests"
-      path: "src/.../*.test.ts"
-    - type: "migration"
-      path: "prisma/migrations/..."
-  
-  acceptance:
-    - "All tests pass"
-    - "No lint errors"
-    - "Matches spec"
-```
-
-### Claude Coder Task Package
-```yaml
-claude_coder_task:
-  id: "TASK-001"
-  mode: "implement"
+  mode: "implement" | "fix" | "test" | "refactor"
   feature: "[Feature Name]"
   
   context:
     spec: |
       [Full technical specification - embedded]
+      OR
+      spec_path: "/docs/development/specs/[feature].md"
     
     conventions: |
       [Code conventions summary - embedded]
+      OR
+      conventions_path: "/docs/development/code-conventions.md"
     
     existing_code:
       - path: "src/modules/[related]/"
-        content: |
-          [Relevant code excerpts]
+        reason: "Related functionality"
     
     data_model: |
       [Relevant entities and relationships]
@@ -742,32 +680,24 @@ claude_coder_task:
   requirements:
     - "[Requirement 1]"
     - "[Requirement 2]"
-```
-
-### Cursor Agent Task Package
-```yaml
-cursor_task:
-  id: "TASK-001"
-  mode: "implement"
-  feature: "[Feature Name]"
-  
-  context:
-    spec_path: "/docs/development/specs/[feature].md"
-    project_structure: "[Brief structure overview]"
-    conventions_path: "/docs/development/code-conventions.md"
-  
-  requirements:
-    - "[Requirement 1]"
-    - "[Requirement 2]"
   
   deliverables:
     - type: "backend"
       path: "src/modules/[module]/"
     - type: "frontend"
       path: "src/components/features/[feature]/"
+    - type: "tests"
+      paths:
+        - "tests/unit/"
+        - "tests/integration/"
+  
+  acceptance:
+    - "All tests pass"
+    - "No lint errors"
+    - "Matches spec"
 ```
 
-### Review Checklist (Same for Both)
+### Review Checklist
 ```yaml
 review_checklist:
   code_quality:
@@ -845,5 +775,5 @@ dev_summary:
 
 ## Как использовать в Cursor
 
-- `/route dev <задача>` — когда нужно: техспека, конвенции, план реализации, выбор cursor vs claude-coder.
+- `/route dev <задача>` — когда нужно: техспека, конвенции, план реализации, координация с Coder Agent.
 
