@@ -1,0 +1,162 @@
+# FURPS+ Requirements Summary — BIOMAX AI v2.0
+# Level 2 Summary для контекст-менеджмента
+
+document: "docs/business/requirements-furps.md"
+created: "2026-01-26"
+status: "Complete"
+token_estimate: ~350
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# EXECUTIVE SUMMARY
+# ═══════════════════════════════════════════════════════════════════════════════
+
+executive_summary: >
+  Документ FURPS+ требований для BIOMAX AI v2.0 содержит 218 требований 
+  (156 P0, 56 P1, 6 P2) по категориям: Functionality, Usability, Reliability, 
+  Performance, Supportability и Constraints. Ключевые constraints: 152-ФЗ 
+  (данные только в РФ), wellness-позиционирование, LLM latency ≤5s.
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# METRICS SUMMARY
+# ═══════════════════════════════════════════════════════════════════════════════
+
+metrics:
+  total_requirements: 218
+  by_priority:
+    P0_must_have: 156
+    P1_should_have: 56
+    P2_nice_to_have: 6
+  
+  by_category:
+    functionality:
+      core_features: 27
+      business_rules: 67
+      security: 12
+    usability: 25
+    reliability: 20
+    performance: 12
+    supportability: 37
+    constraints: 18
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# KEY REQUIREMENTS BY CATEGORY
+# ═══════════════════════════════════════════════════════════════════════════════
+
+key_requirements:
+  functionality:
+    - "F-001: 15 AI-агентов с dynamic orchestration (P0)"
+    - "F-005: Safety Agent проверяет ВСЕ рекомендации (P0)"
+    - "F-006–F-013: Интеграции (Oura, Apple, INVITRO, 23andMe, etc.)"
+    - "F-014–F-018: Custom RAG с multi-tenant isolation (P0)"
+    - "F-023–F-027: Telegram Bot как primary interface (P0)"
+  
+  usability:
+    - "U-006: Task completion rate > 90% (P0)"
+    - "U-011: Time to first value < 10 минут (P0)"
+    - "U-012: Onboarding completion > 70% (P0)"
+    - "U-017: Primary language Русский (P0)"
+  
+  reliability:
+    - "R-001: System uptime 99.5% (P0)"
+    - "R-005: RTO ≤ 4 часа (P0)"
+    - "R-006: RPO ≤ 1 час (P0)"
+    - "R-015: LLM fallback chain GigaChat → YandexGPT (P0)"
+  
+  performance:
+    - "AI response p95 < 5s (P0)"
+    - "Dashboard load < 2s (P0)"
+    - "RAG retrieval < 500ms (P0)"
+    - "Concurrent users M12: 10,000 (P1)"
+  
+  supportability:
+    - "S-007: Unit test coverage > 80% (P0)"
+    - "S-018–S-026: Full observability stack (P0)"
+    - "S-027–S-032: CI/CD, IaC, zero-downtime deploys (P0)"
+  
+  constraints:
+    - "PC-001: Все данные ТОЛЬКО в РФ (152-ФЗ) (P0)"
+    - "PC-006: Wellness-позиционирование, не медицина (P0)"
+    - "PC-009: Обязательные дисклеймеры (P0)"
+    - "DC-002: LangGraph для оркестрации агентов"
+    - "IC-001: Python 3.11+, FastAPI"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# BUSINESS RULES HIGHLIGHTS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+business_rules_highlights:
+  data_processing:
+    - "BR-001: OAuth токены AES-256 encrypted"
+    - "BR-003: History sync: 1 год wearables, all time анализы"
+    - "BR-014: Multi-tenant RAG isolation"
+  
+  ai_recommendations:
+    - "BR-025: ALL рекомендации через Safety Agent"
+    - "BR-027: Дисклеймеры для добавок, диет, протоколов"
+    - "BR-028: Rate limits Free=10/день, Pro+=безлимит"
+  
+  safety:
+    - "BR-018: При критических значениях — обязательно к врачу"
+    - "BR-056: Safety check для всех добавок"
+    - "BR-058: Hard block при критических взаимодействиях"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# SECURITY REQUIREMENTS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+security:
+  authentication: "OAuth 2.0 + 2FA для Pro+"
+  encryption_at_rest: "AES-256"
+  encryption_in_transit: "TLS 1.3"
+  genetic_data: "Отдельный ключ шифрования"
+  audit_logging: "Все операции с ПД"
+  compliance_level: "УЗ-3 (ФСТЭК)"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# CRITICAL CONSTRAINTS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+critical_constraints:
+  regulatory:
+    - "152-ФЗ: локализация данных в РФ обязательна"
+    - "Специальные ПД требуют письменного согласия"
+    - "Регистрация оператора ПД в Роскомнадзоре"
+  
+  wellness_vs_medicine:
+    - "Запрет на диагностику"
+    - "Запрет на назначение рецептурных препаратов"
+    - "Обязательные дисклеймеры"
+    - "Направление к врачу при red flags"
+  
+  technical:
+    - "LLM latency ≤ 5s p95"
+    - "GigaChat context window 8K tokens"
+    - "Telegram msg limit 4096 chars"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# DEPENDENCIES
+# ═══════════════════════════════════════════════════════════════════════════════
+
+dependencies:
+  critical:
+    - "GigaChat API — primary LLM"
+    - "Yandex Cloud / VK Cloud — 152-ФЗ infrastructure"
+    - "Oura / Apple HealthKit — wearables data"
+    - "DrugBank API — safety checks"
+  
+  high:
+    - "PubMed API — research verification"
+    - "INVITRO PDF format — lab parsing"
+    - "23andMe raw data format — genetics"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# REFERENCES
+# ═══════════════════════════════════════════════════════════════════════════════
+
+references:
+  full_document: "docs/business/requirements-furps.md"
+  related_documents:
+    - "docs/discovery/prd.md"
+    - "docs/business/use-cases.md"
+    - "docs/discovery/technical/langraph-architecture.md"
+    - "docs/discovery/legal/legal-summary.md"

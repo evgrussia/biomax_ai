@@ -1,0 +1,106 @@
+# Personas Summary — BIOMAX AI v2.0
+# Level 2 Summary для контекст-менеджмента
+
+meta:
+  document: "docs/discovery/personas.md"
+  created: "2026-01-26"
+  status: "complete"
+  token_estimate: "~300 tokens"
+
+primary_personas:
+  aleksey_advanced_biohacker:
+    age: 35
+    city: "Москва"
+    profession: "IT-предприниматель"
+    income: "800K-1.5M ₽/мес"
+    devices: ["Oura Ring", "CGM", "WHOOP", "iPhone"]
+    key_goals:
+      - "Когнитивная оптимизация"
+      - "Longevity (120+ лет)"
+      - "Data-driven биохакинг"
+    key_pain_points:
+      - "Данные разбросаны по разным приложениям"
+      - "Нет персонализации под генетику"
+      - "Сложно отследить эффекты протоколов"
+    key_features_wanted:
+      - "Custom RAG для протоколов"
+      - "Мультиагентный AI"
+      - "N=1 эксперименты"
+    willingness_to_pay: "5,000-10,000 ₽/мес"
+    acquisition_channels: ["Telegram-чаты", "Подкасты", "Twitter/X"]
+    user_stories: ["US-001", "US-002", "US-003", "US-004", "US-005", "US-006", "US-007"]
+
+  marina_health_optimizer:
+    age: 42
+    city: "Санкт-Петербург"
+    profession: "Финансовый директор"
+    income: "400-600K ₽/мес"
+    devices: ["Apple Watch SE", "iPhone"]
+    key_goals:
+      - "Больше энергии"
+      - "Лучший сон"
+      - "Снижение стресса"
+    key_pain_points:
+      - "Информационный перегруз"
+      - "Нет времени разбираться"
+      - "Непонятные анализы"
+    key_features_wanted:
+      - "Простые рекомендации"
+      - "Напоминания и мотивация"
+      - "Объяснение анализов простым языком"
+    willingness_to_pay: "500-2,000 ₽/мес"
+    acquisition_channels: ["Рекомендации подруг", "Instagram", "App Store"]
+    user_stories: ["US-008", "US-009", "US-010", "US-011", "US-012", "US-013", "US-014"]
+
+  dmitry_longevity_seeker:
+    age: 55
+    city: "Казань"
+    profession: "Врач-терапевт, к.м.н."
+    income: "200-350K ₽/мес"
+    devices: ["Xiaomi Mi Band", "Samsung Galaxy"]
+    key_goals:
+      - "Замедлить старение"
+      - "Оптимизировать биомаркеры до 'оптимальных', не просто 'нормальных'"
+      - "Evidence-based решения"
+    key_pain_points:
+      - "Нет научной строгости в приложениях"
+      - "Нет интеграции эпигенетических данных"
+      - "Референсные значения не для longevity"
+    key_features_wanted:
+      - "Ссылки на исследования (PubMed)"
+      - "Отслеживание биологического возраста"
+      - "Персонализация по генетике"
+    willingness_to_pay: "2,000-5,000 ₽/мес"
+    acquisition_channels: ["Медицинские конференции", "PubMed", "Коллеги"]
+    user_stories: ["US-015", "US-016", "US-017", "US-018", "US-019", "US-020", "US-021"]
+
+secondary_personas:
+  anna_corporate_wellness:
+    role: "HR Director / Head of Corporate Wellness"
+    company_size: "500+ employees"
+    budget: "3-5K ₽/employee/month"
+    key_needs: ["ROI analytics", "White-label", "Admin dashboard", "Slack integration"]
+    priority: "P1 (Post-MVP)"
+
+  igor_integrative_doctor:
+    role: "Врач интегративной медицины"
+    patients: "50-100/month"
+    key_needs: ["Multi-patient view", "Export", "Lab integrations", "Professional protocols"]
+    priority: "P1 (Post-MVP)"
+    note: "B2B2C канал — рекомендует пациентам"
+
+negative_personas:
+  - "Искатель быстрых решений (хочет 'таблетку от всего')"
+  - "Экстремальный биохакер без границ (игнорирует safety)"
+  - "Скептик без желания пробовать"
+
+key_insights:
+  - "Все primary персоны используют Telegram → Telegram-first стратегия"
+  - "Алексей и Дмитрий требуют научных ссылок → Source attribution обязателен"
+  - "Марина требует простоты → Отдельный UX flow для mass market"
+  - "Multi-tier pricing необходим: Free → Optimize → Biohacker Pro → Longevity Elite"
+
+agents_by_persona:
+  aleksey: ["Integration", "Data Scientist", "Genomics", "Custom Protocol", "Longevity", "Coach"]
+  marina: ["Coach", "Sleep", "Mental Health", "Integration", "Lab Interpreter"]
+  dmitry: ["Longevity", "Lab Interpreter", "Research", "Genomics", "Safety"]

@@ -1,0 +1,450 @@
+# BIOMAX AI v2.0 — Project Brief
+# Multi-Agent Biohacking Intelligence Platform
+
+meta:
+  project_name: "BIOMAX AI v2.0"
+  version: "0.1.0"
+  status: "Design Ready"
+  created: "2026-01-26"
+  updated: "2026-01-26"
+  discovery_completed: "2026-01-26"
+  discovery_artifacts: 32
+  quality_gate: "PASSED"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# 1. VISION & PROBLEM STATEMENT
+# ═══════════════════════════════════════════════════════════════════════════════
+
+vision:
+  one_liner: "Personal Health Operating System — операционная система для управления здоровьем с AI-агентами"
+  
+  problem:
+    - "Существующие решения фокусируются на отдельных аспектах (фитнес OR питание OR сон)"
+    - "Нет единой платформы, объединяющей ВСЕ категории биохакинга"
+    - "Отсутствует персонализация на уровне генетики, биомаркеров и целей пользователя"
+    - "Пользователи не могут добавлять собственные протоколы и исследования"
+    - "Нет научной строгости (source attribution, evidence levels)"
+  
+  solution:
+    - "Единая экосистема: 12 мега-категорий, 60+ субкатегорий, 200+ методик биохакинга"
+    - "15 специализированных AI-агентов с dynamic orchestration"
+    - "Расширяемая RAG-база знаний (пользовательские протоколы + научные исследования)"
+    - "100+ API интеграций для сбора данных из всех источников"
+    - "8 измерений wellness + 50+ метрик состояния"
+
+  unique_value_proposition:
+    - "Полнота охвата: ALL biohacking categories в одном месте"
+    - "AI-first: мультиагентная архитектура вместо rule-based систем"
+    - "Custom RAG: каждый пользователь строит свою базу знаний"
+    - "Data-driven: интеграция со 100+ устройств и сервисов"
+    - "Научная строгость: source attribution + evidence levels"
+    - "Российская локализация: 152-ФЗ, локальные лаборатории, российские LLM"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# 2. TARGET AUDIENCE
+# ═══════════════════════════════════════════════════════════════════════════════
+
+target_audience:
+  primary_segments:
+    biohackers_advanced:
+      description: "Продвинутые биохакеры с множеством устройств и протоколов"
+      needs: ["Централизация данных", "Custom протоколы", "N=1 эксперименты"]
+      pain_points: ["Данные разбросаны", "Нет персонализации", "Сложно отслеживать эффекты"]
+      
+    health_optimizers:
+      description: "Люди, активно работающие над здоровьем (не профи)"
+      needs: ["Понятные рекомендации", "Интеграция с устройствами", "AI-коуч"]
+      pain_points: ["Информационный перегруз", "Сложность интерпретации данных"]
+      
+    longevity_focused:
+      description: "Фокус на долголетие и биологический возраст"
+      needs: ["Эпигенетические часы", "Протоколы долголетия", "Tracking biomarkers"]
+      pain_points: ["Высокая стоимость тестов", "Разрозненные данные"]
+      
+  secondary_segments:
+    - "B2B/Corporate wellness программы"
+    - "Клиники интегративной медицины"
+    - "Страховые компании (ДМС интеграция)"
+
+  market_size:
+    global_wellness_market: "$1.5T (2024)"
+    biohacking_segment: "$22B (2024) → $63B (2030)"
+    russia_digital_health: "$1.2B (2024)"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# 3. CORE FEATURES (HIGH LEVEL)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+core_features:
+  f1_multi_agent_ai:
+    name: "Мультиагентная AI-система"
+    description: "15 специализированных агентов с orchestration"
+    agents:
+      - Data Scientist Agent (анализ паттернов)
+      - Nutrition Agent (нутригеномика, диеты)
+      - Sleep Agent (архитектура сна, циркадные ритмы)
+      - Cognitive Agent (ноотропы, нейрофидбэк)
+      - Fitness Agent (тренировки, восстановление)
+      - Longevity Agent (антистарение, биовозраст)
+      - Mental Health Agent (стресс, тревожность)
+      - Lab Interpreter Agent (анализы крови)
+      - Genomics Agent (ДНК-анализ, SNP)
+      - Coach Agent (мотивация, привычки)
+      - Integration Agent (синтез данных)
+      - Research Agent (поиск исследований)
+      - Safety Agent (контрпоказания, взаимодействия)
+      - Custom Protocol Agent (пользовательские методики)
+      - Orchestrator Agent (координация)
+    priority: "P0 — Critical"
+    
+  f2_data_integrations:
+    name: "Интеграции с источниками данных"
+    description: "100+ API для сбора данных"
+    categories:
+      wearables: ["Apple Watch", "Oura", "WHOOP", "Garmin", "Fitbit"]
+      cgm: ["Dexcom", "Libre", "Levels"]
+      labs_ru: ["INVITRO", "Helix", "CMD", "Гемотест"]
+      genomics: ["23andMe", "Ancestry", "Nebula"]
+      microbiome: ["Viome", "ZOE", "Atlas"]
+      nutrition: ["MyFitnessPal", "Cronometer"]
+    priority: "P0 — Critical"
+    
+  f3_custom_rag:
+    name: "Пользовательская база знаний (RAG)"
+    description: "Расширяемая KB с протоколами, исследованиями, N=1 данными"
+    content_types:
+      - "Протоколы (Bryan Johnson, Huberman, etc.)"
+      - "Научные статьи (PDF)"
+      - "Персональные эксперименты"
+      - "Медицинские записи"
+    priority: "P0 — Critical"
+    
+  f4_health_score:
+    name: "Комплексная система оценки"
+    description: "Health Score 0-100 по 8 измерениям wellness"
+    dimensions:
+      - Physical Health (20%)
+      - Metabolic Health (15%)
+      - Cognitive Health (15%)
+      - Emotional Health (15%)
+      - Social Wellness (10%)
+      - Purpose & Meaning (10%)
+      - Environmental (5%)
+      - Biological Age (10%)
+    priority: "P1 — High"
+    
+  f5_digital_twin:
+    name: "Цифровой двойник"
+    description: "Виртуальная модель организма для симуляций"
+    capabilities:
+      - "Predictive Simulation (что будет через 5 лет)"
+      - "Scenario Modeling (сравнение образов жизни)"
+      - "Intervention Testing (виртуальное тестирование протоколов)"
+    priority: "P2 — Medium"
+    
+  f6_biohacker_lab:
+    name: "Biohacker Lab (N=1 эксперименты)"
+    description: "Модуль для проведения персональных экспериментов"
+    workflow: ["Design", "Baseline", "Intervention", "Analysis", "Decision"]
+    ml_methods: ["Bayesian A/B", "Causal Impact", "Multi-armed Bandit"]
+    priority: "P1 — High"
+    
+  f7_safety_module:
+    name: "Safety-модуль"
+    description: "Медицинские границы, контрпоказания, red flags"
+    layers:
+      - "Hard Blocks (абсолютные запреты)"
+      - "Condition Checks (проверка состояний)"
+      - "Red Flags Detection (опасные сигналы)"
+      - "Disclaimer Injection"
+    priority: "P0 — Critical"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# 4. TECHNOLOGY STACK (PRELIMINARY)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+tech_stack:
+  backend:
+    api_gateway: "FastAPI + Kong"
+    agent_orchestrator: "LangGraph / CrewAI"
+    rag_pipeline: "LlamaIndex + Qdrant"
+    databases:
+      profiles: "PostgreSQL"
+      time_series: "ClickHouse / TimescaleDB"
+      vectors: "Qdrant / Pinecone"
+      graph: "Neo4j"
+    cache: "Redis"
+    queue: "Kafka / RabbitMQ"
+    ml_platform: "MLflow + PyTorch"
+    
+  frontend:
+    mobile: "Flutter (iOS + Android)"
+    web: "Next.js + Tailwind"
+    telegram: "aiogram 3.x"
+    voice: "Whisper + TTS"
+    
+  llm_providers:
+    international: ["OpenAI GPT-4o", "Anthropic Claude"]
+    russian: ["GigaChat", "YandexGPT"]
+    medical: ["Med-PaLM 2", "BioMistral"]
+    embeddings: ["text-embedding-3-large", "e5-mistral-7b"]
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# 5. BUSINESS MODEL
+# ═══════════════════════════════════════════════════════════════════════════════
+
+business_model:
+  pricing_tiers:
+    free:
+      price: "0₽"
+      features: ["Базовый Health Score", "1 интеграция", "Coach Agent", "10 запросов/день"]
+    optimize:
+      price: "990₽/мес"
+      features: ["Все wearables", "5 агентов", "100 запросов/день", "Базовый RAG"]
+    biohacker_pro:
+      price: "2490₽/мес"
+      features: ["Все агенты", "Custom RAG 5GB", "Genomics/Microbiome", "Безлимит"]
+    longevity_elite:
+      price: "9990₽/мес"
+      features: ["Эпигенетика", "RAG 50GB", "API", "Консультации экспертов"]
+    enterprise:
+      price: "Custom"
+      features: ["White-label", "On-premise", "SLA", "Dedicated support"]
+      
+  additional_revenue:
+    - "Маркетплейс добавок (10-15% комиссия)"
+    - "Лабораторные тесты (5-8% реферал)"
+    - "Premium Protocols (продажа авторских протоколов)"
+    - "B2B/Corporate wellness"
+    - "ДМС интеграция (white-label для страховых)"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# 6. RISKS & CONSTRAINTS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+risks:
+  regulatory:
+    level: "HIGH"
+    description: "Регуляторные ограничения (медицина vs wellness)"
+    mitigation: "Позиционирование как wellness, дисклеймеры, юридическая экспертиза"
+    
+  data_security:
+    level: "CRITICAL"
+    description: "Безопасность персональных медицинских данных"
+    mitigation: "E2E шифрование, 152-ФЗ compliance, SOC2, аудиты"
+    
+  api_dependency:
+    level: "MEDIUM"
+    description: "Зависимость от API wearables и сервисов"
+    mitigation: "Мультивендорная стратегия, кэширование, оффлайн-режим"
+    
+  ai_hallucinations:
+    level: "HIGH"
+    description: "Галлюцинации LLM в медицинском контексте"
+    mitigation: "RAG с научными базами, Safety Agent, human-in-the-loop"
+    
+  competition:
+    level: "HIGH"
+    description: "Конкуренция от BigTech (Apple, Google)"
+    mitigation: "Фокус на продвинутых биохакеров, глубокая персонализация, RU рынок"
+
+constraints:
+  - "Wellness ≠ Medicine: НЕ ставим диагнозы, НЕ заменяем врача"
+  - "152-ФЗ compliance: хранение данных в РФ"
+  - "Этические границы: no dangerous protocols, no children, no pregnancy without MD"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# 7. SUCCESS METRICS (PRELIMINARY)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+success_metrics:
+  north_star: "Monthly Active Users using AI agents for health decisions"
+  
+  engagement:
+    - "DAU/MAU ratio > 30%"
+    - "AI queries per user > 5/week"
+    - "Data sources connected per user > 3"
+    
+  conversion:
+    - "Free → Paid conversion > 5%"
+    - "Paid retention (M3) > 70%"
+    - "NPS > 50"
+    
+  health_outcomes:
+    - "Users reporting improved Health Score > 60%"
+    - "Successful N=1 experiments > 40%"
+    - "Protocol adherence > 70%"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# 8. REFERENCES
+# ═══════════════════════════════════════════════════════════════════════════════
+
+references:
+  research_document: "docs/BIOMAX_AI_v2_Extended_Research (1).md"
+  competitors_to_analyze:
+    - "Oura / WHOOP / Garmin"
+    - "InsideTracker"
+    - "Levels Health"
+    - "Gyroscope"
+    - "Humanity App"
+  inspirations:
+    - "Bryan Johnson Blueprint"
+    - "Peter Attia / Huberman protocols"
+    - "Notion (for RAG/KB concept)"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# 9. KEY DECISIONS (2026-01-26)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+decisions:
+  platform_priority:
+    decision: "Telegram Bot → Telegram WebApp → Flutter Mobile"
+    rationale: "Быстрый time-to-market через Telegram, затем native apps"
+    date: "2026-01-26"
+    
+  target_market:
+    decision: "Россия (primary)"
+    rationale: "152-ФЗ compliance, локальные лаборатории, GigaChat, понятный рынок"
+    date: "2026-01-26"
+    
+  mvp_scope:
+    decision: "Максимальное кол-во модулей + по 1 интеграции на модуль"
+    rationale: "Демонстрация полноты платформы, валидация всех направлений"
+    date: "2026-01-26"
+    
+  infrastructure:
+    decision: "Self-hosted Kubernetes"
+    rationale: "Контроль над данными, 152-ФЗ, гибкость"
+    date: "2026-01-26"
+    
+  partnerships:
+    decision: "Создать Partnership Landing Page для привлечения партнёров"
+    rationale: "Нет текущих договорённостей, нужна страница для outreach"
+    date: "2026-01-26"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# 10. MVP MODULE MATRIX (All Modules + 1 Integration Each)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+mvp_modules:
+  # Core AI Agents (15)
+  agents:
+    data_scientist:
+      status: "MVP"
+      integration: "Internal data only"
+      
+    nutrition:
+      status: "MVP"
+      integration: "MyFitnessPal API"
+      
+    sleep:
+      status: "MVP"
+      integration: "Oura Ring API"
+      
+    cognitive:
+      status: "MVP"
+      integration: "Cambridge Brain Sciences API"
+      
+    fitness:
+      status: "MVP"
+      integration: "Strava API"
+      
+    longevity:
+      status: "MVP"
+      integration: "TruDiagnostic (manual PDF upload)"
+      
+    mental_health:
+      status: "MVP"
+      integration: "Built-in PHQ-9/GAD-7 surveys"
+      
+    lab_interpreter:
+      status: "MVP"
+      integration: "INVITRO API (or PDF parser)"
+      
+    genomics:
+      status: "MVP"
+      integration: "23andMe raw data import"
+      
+    coach:
+      status: "MVP"
+      integration: "Telegram notifications"
+      
+    integration_agent:
+      status: "MVP"
+      integration: "Internal cross-agent synthesis"
+      
+    research:
+      status: "MVP"
+      integration: "PubMed API"
+      
+    safety:
+      status: "MVP"
+      integration: "DrugBank API (contraindications)"
+      
+    custom_protocol:
+      status: "MVP"
+      integration: "User file upload (PDF/MD)"
+      
+    orchestrator:
+      status: "MVP"
+      integration: "LangGraph internal"
+
+  # Data Sources (1 per category)
+  integrations:
+    wearables: "Oura Ring"
+    cgm: "Dexcom G7 (or Libre via manual)"
+    labs_ru: "INVITRO"
+    genomics: "23andMe"
+    microbiome: "Atlas Biomed"
+    nutrition: "MyFitnessPal"
+    fitness: "Strava"
+    meditation: "Headspace"
+    environment: "Manual input (air quality, light)"
+
+  # LLM Providers
+  llm:
+    primary: "GigaChat Pro"
+    fallback: "YandexGPT"
+    embeddings: "GigaChat Embeddings / e5-mistral-7b (local)"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# 11. NEXT STEPS (DISCOVERY PHASE)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+next_steps:
+  phase: "Discovery"
+  actions:
+    - id: "D1"
+      action: "Конкурентный анализ (InsideTracker, Levels, Gyroscope, Humanity)"
+      agent: "research"
+      priority: "P0"
+      
+    - id: "D2"
+      action: "Детализация User Stories для Primary Personas"
+      agent: "product"
+      priority: "P0"
+      
+    - id: "D3"
+      action: "Определение трекинг-плана и метрик (Activation, Engagement, Conversion)"
+      agent: "analytics"
+      priority: "P1"
+      
+    - id: "D4"
+      action: "Техническое исследование: API wearables, LangGraph architecture"
+      agent: "architect"
+      priority: "P1"
+      
+    - id: "D5"
+      action: "Юридическая экспертиза: 152-ФЗ, wellness vs medicine boundaries"
+      agent: "business-analyst"
+      priority: "P1"
+      
+    - id: "D6"
+      action: "UX Research: интервью с биохакерами (5-10 человек)"
+      agent: "ux"
+      priority: "P0"
+      
+    - id: "D7"
+      action: "Partnership Landing Page — все категории партнёров"
+      agent: "content + dev"
+      priority: "P0"

@@ -1,0 +1,117 @@
+# Use Cases Summary — BIOMAX AI v2.0
+# Level 2 Summary для контекст-менеджмента
+
+meta:
+  document: "docs/business/use-cases.md"
+  created: "2026-01-26"
+  author: "Business Analyst Agent"
+  status: "complete"
+  token_estimate: "~350 tokens"
+
+overview:
+  total_use_cases: 15
+  priority_p0: 13
+  priority_p1: 2
+  total_actors: 6
+  related_user_stories: 21
+
+subsystems:
+  data_integration:
+    use_cases: ["UC-001", "UC-002"]
+    description: "Подключение источников, дашборд"
+    
+  knowledge_base:
+    use_cases: ["UC-003", "UC-004", "UC-005", "UC-010"]
+    description: "RAG протоколы, анализы, генетика, эпигенетика"
+    
+  ai_recommendations:
+    use_cases: ["UC-006", "UC-007", "UC-011", "UC-012", "UC-013"]
+    description: "Персонализация, Telegram, исследования, протоколы, safety"
+    
+  experiments_tracking:
+    use_cases: ["UC-008", "UC-009"]
+    description: "N=1 эксперименты, добавки"
+    
+  reports_notifications:
+    use_cases: ["UC-014", "UC-015"]
+    description: "Отчёты, напоминания"
+
+key_use_cases:
+  uc_001:
+    name: "Подключение источника данных"
+    priority: "P0"
+    actors: ["All Users"]
+    agents: ["Integration Agent"]
+    
+  uc_002:
+    name: "Просмотр централизованного дашборда"
+    priority: "P0"
+    actors: ["All Users"]
+    agents: ["Integration", "Data Scientist", "Lab Interpreter"]
+    
+  uc_006:
+    name: "Получение персонализированных рекомендаций"
+    priority: "P0"
+    actors: ["All Users"]
+    agents: ["Orchestrator", "Longevity", "Nutrition", "Coach", "Safety"]
+    
+  uc_007:
+    name: "Взаимодействие через Telegram Bot"
+    priority: "P0"
+    actors: ["All Users", "Telegram Bot"]
+    agents: ["Orchestrator", "Coach"]
+    
+  uc_013:
+    name: "Проверка взаимодействий препаратов и добавок"
+    priority: "P0"
+    actors: ["All Users"]
+    agents: ["Safety Agent"]
+
+actors:
+  primary:
+    - name: "Алексей (Advanced Biohacker)"
+      use_cases: "All (UC-001 — UC-015)"
+    - name: "Марина (Health Optimizer)"
+      use_cases: "UC-001, UC-002, UC-004, UC-006, UC-007, UC-014, UC-015"
+    - name: "Дмитрий (Longevity Seeker)"
+      use_cases: "All (UC-001 — UC-015)"
+  system:
+    - name: "Telegram Bot"
+      use_cases: "UC-007, UC-014, UC-015"
+    - name: "External APIs"
+      use_cases: "UC-001, UC-004, UC-005, UC-010, UC-011, UC-013"
+    - name: "AI Agents Orchestrator"
+      use_cases: "UC-006, UC-007, UC-012"
+
+agents_usage:
+  safety_agent: 7
+  integration_agent: 4
+  data_scientist_agent: 4
+  coach_agent: 4
+  longevity_agent: 4
+  lab_interpreter_agent: 3
+  genomics_agent: 3
+  nutrition_agent: 3
+  orchestrator_agent: 2
+  research_agent: 2
+  custom_protocol_agent: 1
+  sleep_agent: 1
+
+business_rules_count: 67
+nfr_categories:
+  - "Performance"
+  - "Security"
+  - "Reliability"
+  - "Accessibility"
+
+key_flows:
+  - "OAuth 2.0 для интеграций (wearables)"
+  - "RAG Pipeline для протоколов (PDF → chunks → embeddings)"
+  - "Safety Agent validation для всех рекомендаций"
+  - "Multi-agent orchestration для сложных запросов"
+
+references:
+  full_document: "docs/business/use-cases.md"
+  user_stories: "docs/discovery/user-stories.md"
+  personas: "docs/discovery/personas.md"
+  prd: "docs/discovery/prd.md"
