@@ -31,6 +31,7 @@ import { MetricDetailView } from "@/app/components/MetricDetailView";
 import { BiohackerLabView } from "@/app/components/BiohackerLabView";
 import { MobileDashboard } from "@/app/components/MobileDashboard";
 import { FooterCTA } from "@/app/components/FooterCTA";
+import { useIsMobile } from "@/app/components/ui/use-mobile";
 
 export default function App() {
   const [currentView, setCurrentView] = useState("dashboard");
@@ -48,8 +49,8 @@ export default function App() {
     "ai-chat" | "metrics" | "devices" | "biohacker" | "default"
   >("default");
 
-  // Check if mobile device
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+  // Check if mobile device using hook
+  const isMobile = useIsMobile();
 
   const openModal = (variant: typeof modalVariant) => {
     setModalVariant(variant);
@@ -209,7 +210,7 @@ export default function App() {
         onOpenModal={openModal}
       />
       
-      <div className="ml-60 p-8">
+      <div className="ml-0 p-4 md:ml-52 md:p-6 lg:ml-60 lg:p-8">
         {/* Header */}
         <div className="mb-8 flex items-start justify-between">
           <div>

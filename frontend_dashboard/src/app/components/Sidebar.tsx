@@ -43,7 +43,7 @@ export function Sidebar({ currentView, onViewChange, onOpenModal }: SidebarProps
   };
 
   return (
-    <div className="fixed left-0 top-0 h-screen w-60 border-r border-white/5 bg-[#0A0F1E] p-6">
+    <div className="fixed left-0 top-0 hidden h-screen w-60 border-r border-white/5 bg-[#0A0F1E] p-6 md:block md:w-52 lg:w-60">
       {/* Logo */}
       <div className="mb-12">
         <div className="flex items-center gap-3">

@@ -34,7 +34,7 @@ export function MobileDashboard({ userData, onOpenModal, onOpenMetricDetail }: M
         <div className="flex items-center justify-between">
           <button
             onClick={() => setShowMenu(!showMenu)}
-            className="flex h-10 w-10 items-center justify-center rounded-lg text-white transition-colors hover:bg-white/10"
+            className="flex h-11 w-11 min-h-[44px] min-w-[44px] items-center justify-center rounded-lg text-white transition-colors hover:bg-white/10"
           >
             {showMenu ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -47,7 +47,7 @@ export function MobileDashboard({ userData, onOpenModal, onOpenMetricDetail }: M
 
           <button
             onClick={() => onOpenModal("default")}
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#00D4FF] to-[#8B5CF6] text-white"
+            className="flex h-11 w-11 min-h-[44px] min-w-[44px] items-center justify-center rounded-full bg-gradient-to-br from-[#00D4FF] to-[#8B5CF6] text-white"
           >
             <User className="h-5 w-5" />
           </button>
@@ -63,9 +63,12 @@ export function MobileDashboard({ userData, onOpenModal, onOpenMetricDetail }: M
           >
             <div className="mb-8 flex items-center justify-between">
               <h2 className="text-xl font-bold text-white">Меню</h2>
-              <button onClick={() => setShowMenu(false)} className="text-white/60">
-                <X className="h-6 w-6" />
-              </button>
+            <button 
+              onClick={() => setShowMenu(false)} 
+              className="flex h-11 w-11 min-h-[44px] min-w-[44px] items-center justify-center text-white/60 hover:bg-white/10 rounded-lg transition-colors"
+            >
+              <X className="h-6 w-6" />
+            </button>
             </div>
 
             <nav className="space-y-1">
@@ -82,7 +85,7 @@ export function MobileDashboard({ userData, onOpenModal, onOpenMetricDetail }: M
                     onOpenModal("default");
                     setShowMenu(false);
                   }}
-                  className="flex w-full items-center gap-3 rounded-lg px-4 py-3 text-white/70 transition-all hover:bg-white/10 hover:text-white"
+                  className="flex w-full min-h-[44px] items-center gap-3 rounded-lg px-4 py-3 text-white/70 transition-all hover:bg-white/10 hover:text-white"
                 >
                   <span className="text-2xl">{item.icon}</span>
                   <span className="font-medium">{item.label}</span>
@@ -106,7 +109,7 @@ export function MobileDashboard({ userData, onOpenModal, onOpenMetricDetail }: M
             </div>
             <button
               onClick={() => setShowBanner(false)}
-              className="flex h-8 w-8 items-center justify-center rounded-lg text-white/60 hover:bg-white/10"
+              className="flex h-11 w-11 min-h-[44px] min-w-[44px] items-center justify-center rounded-lg text-white/60 hover:bg-white/10"
             >
               <X className="h-4 w-4" />
             </button>
@@ -280,7 +283,7 @@ export function MobileDashboard({ userData, onOpenModal, onOpenMetricDetail }: M
             />
             <button
               onClick={() => onOpenModal("ai-chat")}
-              className="absolute right-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-lg bg-gradient-to-r from-[#00D4FF] to-[#00FF94]"
+              className="absolute right-2 top-1/2 flex h-11 w-11 min-h-[44px] min-w-[44px] -translate-y-1/2 items-center justify-center rounded-lg bg-gradient-to-r from-[#00D4FF] to-[#00FF94]"
             >
               <Send className="h-4 w-4 text-white" />
             </button>
@@ -296,7 +299,7 @@ export function MobileDashboard({ userData, onOpenModal, onOpenMetricDetail }: M
               setActiveTab("dashboard");
               onOpenModal("default");
             }}
-            className={`flex flex-col items-center gap-1 py-3 transition-colors ${
+            className={`flex flex-col items-center gap-1 min-h-[44px] justify-center py-3 transition-colors ${
               activeTab === "dashboard" ? "text-[#00D4FF]" : "text-white/60"
             }`}
           >
@@ -309,7 +312,7 @@ export function MobileDashboard({ userData, onOpenModal, onOpenMetricDetail }: M
               setActiveTab("agents");
               onOpenModal("ai-chat");
             }}
-            className={`flex flex-col items-center gap-1 py-3 transition-colors ${
+            className={`flex flex-col items-center gap-1 min-h-[44px] justify-center py-3 transition-colors ${
               activeTab === "agents" ? "text-[#00D4FF]" : "text-white/60"
             }`}
           >
@@ -322,7 +325,7 @@ export function MobileDashboard({ userData, onOpenModal, onOpenMetricDetail }: M
               setActiveTab("supplements");
               onOpenModal("default");
             }}
-            className={`flex flex-col items-center gap-1 py-3 transition-colors ${
+            className={`flex flex-col items-center gap-1 min-h-[44px] justify-center py-3 transition-colors ${
               activeTab === "supplements" ? "text-[#00D4FF]" : "text-white/60"
             }`}
           >
@@ -335,7 +338,7 @@ export function MobileDashboard({ userData, onOpenModal, onOpenMetricDetail }: M
               setActiveTab("lab");
               onOpenModal("biohacker");
             }}
-            className={`flex flex-col items-center gap-1 py-3 transition-colors ${
+            className={`flex flex-col items-center gap-1 min-h-[44px] justify-center py-3 transition-colors ${
               activeTab === "lab" ? "text-[#00D4FF]" : "text-white/60"
             }`}
           >
@@ -348,7 +351,7 @@ export function MobileDashboard({ userData, onOpenModal, onOpenMetricDetail }: M
               setActiveTab("settings");
               onOpenModal("default");
             }}
-            className={`flex flex-col items-center gap-1 py-3 transition-colors ${
+            className={`flex flex-col items-center gap-1 min-h-[44px] justify-center py-3 transition-colors ${
               activeTab === "settings" ? "text-[#00D4FF]" : "text-white/60"
             }`}
           >

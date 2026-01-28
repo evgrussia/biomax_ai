@@ -47,7 +47,7 @@ interface BiohackerLabViewProps {
 
 export function BiohackerLabView({ onOpenModal }: BiohackerLabViewProps) {
   return (
-    <div className="ml-60 p-8">
+    <div className="ml-0 p-4 md:ml-52 md:p-6 lg:ml-60 lg:p-8">
       {/* Demo Banner */}
       <div className="mb-8">
         <DemoBanner />
