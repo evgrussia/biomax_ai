@@ -1,5 +1,5 @@
 import { X, Mail, Send, Check } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface FeatureModalProps {
   isOpen: boolean;
@@ -56,6 +56,28 @@ export function FeatureModal({
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 
+  // Prevent body scroll when modal is open
+  useEffect(() => {
+    if (isOpen) {
+      // Save current scroll position
+      const scrollY = window.scrollY;
+      // Lock body scroll
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = '100%';
+      document.body.style.overflow = 'hidden';
+      
+      return () => {
+        // Restore scroll position
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        document.body.style.overflow = '';
+        window.scrollTo(0, scrollY);
+      };
+    }
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   const content = modalContent[variant];
@@ -73,22 +95,24 @@ export function FeatureModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
+    <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto px-4 py-4 sm:items-center sm:py-8">
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+        className="fixed inset-0 bg-black/70 backdrop-blur-sm"
         onClick={onClose}
       />
 
       {/* Modal */}
-      <div className="glass-card relative z-10 w-full max-w-lg border-2 border-white/10 p-8 shadow-[0_0_50px_rgba(0,212,255,0.2)]">
-        {/* Close Button */}
-        <button
-          onClick={onClose}
-          className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white/60 transition-all hover:bg-white/10 hover:text-white"
-        >
-          <X className="h-5 w-5" />
-        </button>
+      <div className="glass-card relative z-10 my-auto w-full max-w-lg border-2 border-white/10 p-6 sm:p-8 shadow-[0_0_50px_rgba(0,212,255,0.2)] max-h-[calc(100vh-2rem)] sm:max-h-[calc(100vh-4rem)] overflow-y-auto">
+        {/* Close Button - Sticky на мобильных, всегда видимая */}
+        <div className="sticky top-0 z-20 -mt-6 -mr-6 mb-4 flex justify-end sm:absolute sm:right-4 sm:top-4 sm:mt-0 sm:mr-0 sm:mb-0">
+          <button
+            onClick={onClose}
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-[#0A0F1E]/95 backdrop-blur-sm text-white/60 transition-all hover:bg-white/10 hover:text-white"
+          >
+            <X className="h-5 w-5" />
+          </button>
+        </div>
 
         {/* Icon */}
         <div className="mb-4 flex justify-center">

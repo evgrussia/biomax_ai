@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Activity,
   Brain,
@@ -51,6 +51,22 @@ export default function App() {
 
   // Check if mobile device using hook
   const isMobile = useIsMobile();
+
+  // Prevent auto-scroll on view changes and page load
+  useEffect(() => {
+    // Scroll to top when view changes
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [currentView, onboardingStep]);
+
+  // Prevent auto-scroll when modal opens
+  useEffect(() => {
+    if (modalOpen) {
+      // Save scroll position before opening modal
+      const scrollY = window.scrollY;
+      // Scroll to top to prevent mid-page focus
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+  }, [modalOpen]);
 
   const openModal = (variant: typeof modalVariant) => {
     setModalVariant(variant);
