@@ -199,8 +199,12 @@
   }
 }
 
-/* Glassmorphism utilities */
+/* Safe area support for iPhone */
 @layer utilities {
+  .safe-area-inset-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+  
   .glass-card {
     background: rgba(26, 31, 46, 0.6);
     backdrop-filter: blur(20px);

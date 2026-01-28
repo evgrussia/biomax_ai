@@ -28,7 +28,7 @@ export function MobileDashboard({ userData, onOpenModal, onOpenMetricDetail }: M
   const userName = userData?.name || "Алексей";
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-[#0A0F1E] via-[#0F1425] to-[#1A1F2E] pb-24">
+    <div className="relative min-h-screen bg-gradient-to-br from-[#0A0F1E] via-[#0F1425] to-[#1A1F2E] pb-32">
       {/* Mobile Header */}
       <div className="sticky top-0 z-40 border-b border-white/10 bg-[#0A0F1E]/95 px-4 py-3 backdrop-blur-lg">
         <div className="flex items-center justify-between">
@@ -118,14 +118,14 @@ export function MobileDashboard({ userData, onOpenModal, onOpenMetricDetail }: M
       )}
 
       {/* Main Content */}
-      <div className="px-4 pt-6">
+      <div className="px-4 pt-6 overflow-x-hidden">
         {/* Greeting */}
         <div className="mb-6">
           <div className="mb-1 flex items-center gap-2">
-            <h1 className="text-2xl font-bold text-white">{getGreeting()}, {userName}!</h1>
-            <span className="text-2xl">👋</span>
+            <h1 className="text-2xl font-bold text-white break-words">{getGreeting()}, {userName}!</h1>
+            <span className="text-2xl shrink-0">👋</span>
           </div>
-          <p className="text-sm text-white/60">Ваш персональный Health Score</p>
+          <p className="text-sm text-white/60 break-words">Ваш персональный Health Score</p>
         </div>
 
         {/* Health Score Card */}
@@ -292,19 +292,19 @@ export function MobileDashboard({ userData, onOpenModal, onOpenMetricDetail }: M
       </div>
 
       {/* Bottom Tab Bar */}
-      <div className="fixed bottom-0 left-0 right-0 z-30 border-t border-white/10 bg-[#0A0F1E]/95 backdrop-blur-lg">
+      <div className="fixed bottom-0 left-0 right-0 z-30 border-t border-white/10 bg-[#0A0F1E]/95 backdrop-blur-lg safe-area-inset-bottom">
         <div className="grid grid-cols-5">
           <button
             onClick={() => {
               setActiveTab("dashboard");
               onOpenModal("default");
             }}
-            className={`flex flex-col items-center gap-1 min-h-[44px] justify-center py-3 transition-colors ${
+            className={`flex flex-col items-center gap-1 min-h-[44px] justify-center py-2 px-1 transition-colors ${
               activeTab === "dashboard" ? "text-[#00D4FF]" : "text-white/60"
             }`}
           >
             <span className="text-xl">📊</span>
-            <span className="text-xs font-medium">Dashboard</span>
+            <span className="text-[10px] sm:text-xs font-medium truncate w-full text-center">Dashboard</span>
           </button>
 
           <button
@@ -312,12 +312,12 @@ export function MobileDashboard({ userData, onOpenModal, onOpenMetricDetail }: M
               setActiveTab("agents");
               onOpenModal("ai-chat");
             }}
-            className={`flex flex-col items-center gap-1 min-h-[44px] justify-center py-3 transition-colors ${
+            className={`flex flex-col items-center gap-1 min-h-[44px] justify-center py-2 px-1 transition-colors ${
               activeTab === "agents" ? "text-[#00D4FF]" : "text-white/60"
             }`}
           >
             <span className="text-xl">🤖</span>
-            <span className="text-xs font-medium">Agents</span>
+            <span className="text-[10px] sm:text-xs font-medium truncate w-full text-center">Agents</span>
           </button>
 
           <button
@@ -325,12 +325,12 @@ export function MobileDashboard({ userData, onOpenModal, onOpenMetricDetail }: M
               setActiveTab("supplements");
               onOpenModal("default");
             }}
-            className={`flex flex-col items-center gap-1 min-h-[44px] justify-center py-3 transition-colors ${
+            className={`flex flex-col items-center gap-1 min-h-[44px] justify-center py-2 px-1 transition-colors ${
               activeTab === "supplements" ? "text-[#00D4FF]" : "text-white/60"
             }`}
           >
             <span className="text-xl">💊</span>
-            <span className="text-xs font-medium">Suppl</span>
+            <span className="text-[10px] sm:text-xs font-medium truncate w-full text-center">Suppl</span>
           </button>
 
           <button
@@ -338,12 +338,12 @@ export function MobileDashboard({ userData, onOpenModal, onOpenMetricDetail }: M
               setActiveTab("lab");
               onOpenModal("biohacker");
             }}
-            className={`flex flex-col items-center gap-1 min-h-[44px] justify-center py-3 transition-colors ${
+            className={`flex flex-col items-center gap-1 min-h-[44px] justify-center py-2 px-1 transition-colors ${
               activeTab === "lab" ? "text-[#00D4FF]" : "text-white/60"
             }`}
           >
             <span className="text-xl">🧪</span>
-            <span className="text-xs font-medium">Lab</span>
+            <span className="text-[10px] sm:text-xs font-medium truncate w-full text-center">Lab</span>
           </button>
 
           <button
@@ -351,12 +351,12 @@ export function MobileDashboard({ userData, onOpenModal, onOpenMetricDetail }: M
               setActiveTab("settings");
               onOpenModal("default");
             }}
-            className={`flex flex-col items-center gap-1 min-h-[44px] justify-center py-3 transition-colors ${
+            className={`flex flex-col items-center gap-1 min-h-[44px] justify-center py-2 px-1 transition-colors ${
               activeTab === "settings" ? "text-[#00D4FF]" : "text-white/60"
             }`}
           >
             <span className="text-xl">⚙️</span>
-            <span className="text-xs font-medium">Settings</span>
+            <span className="text-[10px] sm:text-xs font-medium truncate w-full text-center">Settings</span>
           </button>
         </div>
       </div>

@@ -189,23 +189,23 @@ export function WelcomeScreen({ onStart }: WelcomeScreenProps) {
           {/* Email Subscription */}
           <div className="rounded-xl border border-white/5 bg-white/5 p-4 backdrop-blur-sm">
             <div className="mb-3 flex items-center gap-2">
-              <Mail className="h-4 w-4 text-[#00D4FF]" />
-              <span className="text-sm text-white/80">
+              <Mail className="h-4 w-4 shrink-0 text-[#00D4FF]" />
+              <span className="text-sm text-white/80 break-words">
                 📩 Хотите узнать о запуске первыми?
               </span>
             </div>
-            <form onSubmit={handleEmailSubmit} className="flex gap-2">
+            <form onSubmit={handleEmailSubmit} className="flex flex-col sm:flex-row gap-2">
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="your@email.com"
-                className="flex-1 rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-white placeholder:text-white/40 focus:border-[#00D4FF]/50 focus:outline-none focus:ring-2 focus:ring-[#00D4FF]/20"
+                className="flex-1 min-w-0 rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-sm text-white placeholder:text-white/40 focus:border-[#00D4FF]/50 focus:outline-none focus:ring-2 focus:ring-[#00D4FF]/20"
               />
               <button
                 type="submit"
                 disabled={!email || emailSubmitted}
-                className="rounded-lg bg-gradient-to-r from-[#00D4FF] to-[#00FF94] px-6 py-2 text-sm font-semibold text-white transition-all hover:scale-105 disabled:opacity-50 disabled:hover:scale-100"
+                className="shrink-0 rounded-lg bg-gradient-to-r from-[#00D4FF] to-[#00FF94] px-4 sm:px-6 py-2 text-sm font-semibold text-white transition-all hover:scale-105 disabled:opacity-50 disabled:hover:scale-100 whitespace-nowrap"
               >
                 {emailSubmitted ? "✓ Готово" : "Отправить"}
               </button>

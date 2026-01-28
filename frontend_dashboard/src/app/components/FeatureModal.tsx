@@ -139,20 +139,20 @@ export function FeatureModal({
 
         {/* Email Subscription */}
         <div className="mb-6">
-          <p className="mb-3 text-center text-sm font-medium text-white/80">
+          <p className="mb-3 text-center text-sm font-medium text-white/80 break-words px-2">
             🔔 Хотите узнать о запуске первыми?
           </p>
 
           {subscribed ? (
             <div className="rounded-xl border border-[#00FF94]/30 bg-[#00FF94]/10 p-4">
               <div className="flex items-center justify-center gap-2 text-[#00FF94]">
-                <Check className="h-5 w-5" strokeWidth={3} />
-                <span className="font-medium">Спасибо! Мы свяжемся с вами.</span>
+                <Check className="h-5 w-5 shrink-0" strokeWidth={3} />
+                <span className="font-medium break-words">Спасибо! Мы свяжемся с вами.</span>
               </div>
             </div>
           ) : (
-            <form onSubmit={handleSubscribe} className="flex gap-2">
-              <div className="relative flex-1">
+            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2">
+              <div className="relative flex-1 min-w-0">
                 <Mail className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-white/40" />
                 <input
                   type="email"
@@ -165,10 +165,11 @@ export function FeatureModal({
               </div>
               <button
                 type="submit"
-                className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#00D4FF] to-[#00FF94] px-6 py-3 text-sm font-semibold text-white shadow-[0_0_20px_rgba(0,212,255,0.3)] transition-all hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(0,212,255,0.5)]"
+                className="shrink-0 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#00D4FF] to-[#00FF94] px-4 sm:px-6 py-3 text-sm font-semibold text-white shadow-[0_0_20px_rgba(0,212,255,0.3)] transition-all hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(0,212,255,0.5)] whitespace-nowrap"
               >
                 <Send className="h-4 w-4" />
                 <span className="hidden sm:inline">Подписаться</span>
+                <span className="sm:hidden">Отправить</span>
               </button>
             </form>
           )}
