@@ -1,0 +1,56 @@
+# BIOMAX AI v2.0 — Project Brief
+# Master document (context store). Last updated: 2026-01-26
+
+project:
+  name: BIOMAX AI v2.0
+  tagline: Personal Health Operating System
+  one_liner: >
+    Мультиагентная платформа для управления здоровьем: 15 AI-агентов,
+    100+ интеграций, Custom RAG, 152-ФЗ compliance, ориентир на РФ.
+
+vision:
+  statement: >
+    BIOMAX AI — операционная система для здоровья, которая растёт вместе
+    с пользователем и накапливает персонализированные знания.
+  problems:
+    - Фрагментация данных по 5–10+ приложениям
+    - Отсутствие персонализации (генетика, биомаркеры)
+    - Нет единой платформы для N=1 экспериментов
+    - Закрытые экосистемы без Custom RAG
+
+target_audience:
+  primary:
+    - Advanced Biohackers (продвинутые биохакеры)
+    - Health Optimizers (оптимизаторы здоровья)
+    - Longevity Seekers (фокус на долголетии)
+  market: Russia (primary), 152-ФЗ, локальные лаборатории, GigaChat/YandexGPT
+
+p0_features:
+  - Health Score 0–100 и единый дашборд
+  - 15 специализированных AI-агентов
+  - 100+ интеграций (wearables, labs, CGM, genomics)
+  - Custom RAG (протоколы, исследования)
+  - Biohacker Lab (N=1 эксперименты)
+  - Telegram Bot → WebApp → Flutter
+  - 152-ФЗ compliance
+
+tech_stack:
+  backend: FastAPI, LangGraph/CrewAI, LlamaIndex, Qdrant, PostgreSQL, ClickHouse
+  frontend: Next.js, Flutter, Telegram (aiogram 3.x)
+  llm: GPT-4o, Claude, GigaChat, YandexGPT
+
+decisions:
+  - platform_priority: Telegram Bot → WebApp → Flutter
+  - target_market: Russia primary
+  - mvp_scope: Max modules, 1 integration each
+  - infrastructure: Self-hosted Kubernetes
+
+next_steps:
+  - DESIGN phase (~6 weeks): Design System, wireframes, LangGraph design, DB schema
+  - DEVELOPMENT: MVP → Growth → Scale
+
+references:
+  vision: docs/discovery/vision.md
+  prd: docs/discovery/prd.md
+  user_stories: docs/discovery/user-stories.md
+  roadmap: docs/discovery/roadmap.md

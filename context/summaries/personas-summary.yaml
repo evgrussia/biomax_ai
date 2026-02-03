@@ -1,0 +1,31 @@
+# Personas Summary — BIOMAX AI v2.0 (3 primary)
+
+personas:
+  - id: aleksey
+    name: Алексей Соколов
+    type: Advanced Biohacker
+    age: 35
+    job: Сооснователь IT-стартапа
+    quote: "Все данные в одном месте, AI помогает находить закономерности"
+    goals: [N=1 эксперименты, Custom RAG, интеграция всех устройств]
+    willingness_to_pay: 2,490–9,990 ₽/мес
+
+  - id: marina
+    name: Марина Козлова
+    type: Health Optimizer
+    age: 32
+    job: Маркетолог
+    quote: "AI-коуч, который знает меня и даёт понятные рекомендации"
+    goals: [Понятные советы, автоматический сбор данных, привычки]
+    willingness_to_pay: 990–2,490 ₽/мес
+
+  - id: dmitry
+    name: Дмитрий Волков
+    type: Longevity Seeker
+    age: 48
+    job: Топ-менеджер
+    quote: "Биовозраст, эпигенетика, протоколы долголетия"
+    goals: [Эпигенетический возраст, премиум-протоколы, консультации]
+    willingness_to_pay: 9,990 ₽/мес
+
+full_doc: docs/discovery/personas.md

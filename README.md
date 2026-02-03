@@ -18,7 +18,7 @@
 
 Начните отсюда, если нужен быстрый обзор проекта:
 
-- **[Project Brief](context/project-brief.yaml)** — Основной документ проекта (448 строк)
+- **[Project Brief](context/project-brief.yaml)** — основной документ проекта
   - Видение и проблемы
   - Целевая аудитория и рынок
   - Основные функции (7 P0 features)
@@ -132,7 +132,7 @@ LLM:
 | Документ | Размер |
 |----------|--------|
 | [Metrics Summary](context/summaries/metrics-framework-summary.yaml) | 50 строк |
-| [Tracking Plan Summary](context/summaries/metrics-framework-summary.yaml) | 50 строк |
+| [Tracking Plan Summary](context/summaries/tracking-plan-summary.yaml) | 50 строк |
 
 ---
 
@@ -141,7 +141,7 @@ LLM:
 | № | Документ | Размер | Описание |
 |---|----------|--------|---------|
 | 1 | [User Flows](docs/design/user-flows.md) | ~250 строк | **5 основных flow**: Onboarding, Dashboard, RAG, Recommendations, Reports |
-| 2 | [UX Research](docs/discovery/ux-research.md) | ~300 строк | **10 интервью** с биохакерами, findings, insights, accessibility |
+| 2 | [UX Research](docs/discovery/ux-research.md) | ~300 строк | **Findings** по биохакерам и health optimizers, insights, accessibility |
 
 #### 📄 Доп. материалы
 
@@ -234,7 +234,7 @@ LLM:
 ├── personas.md ......................... Personas × 3
 ├── roadmap.md .......................... Phase-based roadmap
 ├── competitive-analysis.md ............ Competitors (8) — 875 lines
-├── ux-research.md ..................... UX Findings (10 interviews)
+├── ux-research.md ..................... UX Findings, insights, accessibility
 ├── technical/
 │   ├── api-integrations.md ........... 100+ API catalog
 │   ├── langraph-architecture.md ..... Multi-agent design
@@ -267,7 +267,7 @@ LLM:
 ├── partnership-page.md ........... Partner landing page
 ├── research/
 │   └── market-research.md ....... Market size & trends
-└── BIOMAX_AI_v2_Extended_Research.md ... Deep research (1,284 lines)
+└── BIOMAX_AI_v2_Extended_Research (1).md ... Deep research (1,284 lines)
 ```
 
 **Reference**: [DISCOVERY_COMPLETION_REPORT.md](DISCOVERY_COMPLETION_REPORT.md)
@@ -464,7 +464,7 @@ Total: ~505 lines (perfect for 30-45 minute read)
 └── 2026-01-26-discovery-phase-complete.md ........ **FINAL PHASE COMPLETION** ✅
 ```
 
-**Reference**: [DISCOVERY_COMPLETION_REPORT.md](DISCOVERY_COMPLETION_REPORT.md) (500 lines, comprehensive phase review)
+**Reference**: [DISCOVERY_COMPLETION_REPORT.md](DISCOVERY_COMPLETION_REPORT.md)
 
 ---
 

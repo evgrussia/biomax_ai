@@ -1,0 +1,27 @@
+# Roadmap Summary — BIOMAX AI v2.0
+
+strategy: "Telegram Bot → WebApp → Flutter"
+market: Russia
+north_star: "MAU using AI agents for health decisions"
+
+phases:
+  - name: Alpha
+    timeline: M1–M3
+    goal: Technical validation, core infrastructure
+  - name: Beta (MVP)
+    timeline: M4–M6
+    goal: Product-Market Fit, 1,000 beta users
+  - name: V1.0 Launch
+    timeline: M6–M9
+    goal: Public launch, 10,000 users
+  - name: V1.5 Growth
+    timeline: M9–M12
+    goal: Retention, 50,000 users
+  - name: V2.0 Scale
+    timeline: M12–M18
+    goal: Mobile, B2B, 200,000 users
+  - name: V3.0 International
+    timeline: M18–M24
+    goal: Multi-region, 500,000 users
+
+full_doc: docs/discovery/roadmap.md

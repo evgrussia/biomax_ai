@@ -1,0 +1,10 @@
+# UX Research Summary — BIOMAX AI v2.0
+
+scope: "10 интервью с биохакерами и health optimizers"
+findings:
+  - "Нужен единый источник правды вместо 5+ приложений"
+  - "Рекомендации должны быть с источниками и уровнями доказательности"
+  - "Custom RAG и N=1 эксперименты — ключевые ожидания продвинутых пользователей"
+accessibility: "WCAG A compliance в roadmap"
+
+full_doc: docs/discovery/ux-research.md

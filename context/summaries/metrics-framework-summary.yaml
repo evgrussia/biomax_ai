@@ -1,0 +1,19 @@
+# Metrics Framework Summary — BIOMAX AI v2.0
+
+north_star: "MAU using AI agents for health decisions (MAU-AI)"
+health_outcome: "Users with Improved Health Score (3-month rolling)"
+
+aarrr:
+  Acquisition: "CAC, channel attribution"
+  Activation: "Time to first AI recommendation"
+  Retention: "DAU/MAU > 30%, M3 retention"
+  Revenue: "ARPU, MRR, conversion F→P"
+  Referral: "NPS, viral coefficient"
+
+targets_m12:
+  MAU_AI: 15,000
+  Free_to_Paid: "> 5%"
+  Paid_retention_M3: "> 70%"
+  NPS: "> 50"
+
+full_doc: docs/analytics/metrics-framework.md

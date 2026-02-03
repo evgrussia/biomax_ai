@@ -1,0 +1,13 @@
+# Tracking Plan Summary — BIOMAX AI v2.0
+
+event_taxonomy:
+  - "user_signed_up, onboarding_started, onboarding_completed"
+  - "integration_connected, data_synced"
+  - "ai_recommendation_received, recommendation_completed"
+  - "health_score_viewed, report_generated"
+  - "experiment_started, experiment_completed"
+
+dashboards: "Acquisition, Activation, Retention, Revenue, Health Outcomes"
+data_architecture: "Event pipeline → Data warehouse → BI"
+
+full_doc: docs/analytics/tracking-plan.md

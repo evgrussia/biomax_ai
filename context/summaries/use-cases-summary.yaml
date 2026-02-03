@@ -1,0 +1,12 @@
+# Use Cases Summary — BIOMAX AI v2.0
+
+key_use_cases:
+  - "Онбординг: подключение источников, первый Health Score"
+  - "Ежедневный дашборд и рекомендации от Coach/Sleep/Nutrition"
+  - "Загрузка анализов и интерпретация Lab Interpreter"
+  - "Custom RAG: индексация протоколов, персональные ответы"
+  - "Biohacker Lab: дизайн N=1 эксперимента, анализ результатов"
+  - "Longevity: биовозраст, эпигенетика, премиум-протоколы"
+
+personas: [Advanced Biohacker, Health Optimizer, Longevity Seeker]
+full_doc: docs/business/use-cases.md

@@ -1,0 +1,16 @@
+# Requirements (FURPS+) Summary — BIOMAX AI v2.0
+
+total: 218
+breakdown:
+  P0: 156
+  P1: 56
+  P2: 6
+
+categories:
+  Functional: "FR-001..FR-0xx, core features, agents, integrations"
+  Usability: "Onboarding, accessibility, WCAG A"
+  Reliability: "Uptime, data integrity, 152-ФЗ"
+  Performance: "Latency, sync frequency"
+  Supportability: "Logging, monitoring, docs"
+
+full_doc: docs/business/requirements-furps.md
