@@ -32,14 +32,6 @@
 | 6 | [Competitive Analysis](docs/discovery/competitive-analysis.md) | 875 строк | **8 конкурентов** (InsideTracker, Levels, Oura, WHOOP, Gyroscope и др.) |
 | 7 | [Extended Research](docs/BIOMAX_AI_v2_Extended_Research%20(1).md) | 1,284 строк | **Глубокий market research** — biohacking тренды, научная база, inspiration |
 
-#### 📋 Резюме для быстрого ознакомления
-
-| Документ | Размер | Для кого |
-|----------|--------|----------|
-| [PRD Summary](context/summaries/prd-summary.md) | 75 строк | Быстрый обзор основных фич |
-| [Personas Summary](context/summaries/personas-summary.yaml) | 50 строк | 3 personas на одной странице |
-| [Roadmap Summary](context/summaries/roadmap-summary.yaml) | 40 строк | Таймлайн фаз в YAML |
-
 ---
 
 ### 2️⃣ БИЗНЕС И МОДЕЛЬ (4 документа)
