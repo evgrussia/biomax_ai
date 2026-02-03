@@ -14,22 +14,6 @@
 
 Все документы проекта организованы по **типам** и **фазам разработки**. Используйте этот каталог для навигации по проекту.
 
-### 🎯 Быстрый старт (5-10 минут)
-
-Начните отсюда, если нужен быстрый обзор проекта:
-
-- **[Project Brief](context/project-brief.yaml)** — основной документ проекта
-  - Видение и проблемы
-  - Целевая аудитория и рынок
-  - Основные функции (7 P0 features)
-  - Tech stack и MVP-модули
-  - Решения и следующие шаги
-
-- **[Project Brief Summary](context/summaries/project-brief-summary.md)** — 1-страничное резюме
-  - Одна строка описания
-  - Инновации и преимущества
-  - Целевые сегменты
-
 ---
 
 ## 📋 ПО ТИПАМ ДОКУМЕНТОВ
@@ -65,14 +49,6 @@
 | 1 | [Business Model](docs/business/business-model.md) | ~300 строк | **5 pricing tiers** (Free → Longevity Elite), revenue streams, unit economics |
 | 2 | [Requirements (FURPS+)](docs/business/requirements-furps.md) | ~400 строк | **218 требований**: Functional, Usability, Reliability, Performance, Supportability |
 | 3 | [Use Cases](docs/business/use-cases.md) | ~200 строк | **Основные юз-кейсы** по personas |
-
-#### 📋 Резюме
-
-| Документ | Размер |
-|----------|--------|
-| [Business Model Summary](context/summaries/business-model-summary.md) | 55 строк |
-| [Requirements Summary (FURPS+)](context/summaries/requirements-furps-summary.yaml) | 60 строк |
-| [Use Cases Summary](context/summaries/use-cases-summary.yaml) | 50 строк |
 
 ---
 
@@ -127,13 +103,6 @@ LLM:
 | 1 | [Metrics Framework](docs/analytics/metrics-framework.md) | ~250 строк | **AARRR metrics** + health outcome KPIs + event taxonomy |
 | 2 | [Tracking Plan](docs/analytics/tracking-plan.md) | ~300 строк | **Event taxonomy**, dashboards, data architecture, funnel definitions |
 
-#### 📋 Резюме
-
-| Документ | Размер |
-|----------|--------|
-| [Metrics Summary](context/summaries/metrics-framework-summary.yaml) | 50 строк |
-| [Tracking Plan Summary](context/summaries/tracking-plan-summary.yaml) | 50 строк |
-
 ---
 
 ### 6️⃣ ДИЗАЙН И UX (2 документа)
@@ -146,12 +115,6 @@ LLM:
 #### 📄 Доп. материалы
 
 - [Customer Journey Map](docs/design/cjm.md) — CJM для каждой personas
-
-#### 📋 Резюме
-
-| Документ | Размер |
-|----------|--------|
-| [UX Research Summary](context/summaries/ux-research-summary.yaml) | 50 строк |
 
 ---
 
